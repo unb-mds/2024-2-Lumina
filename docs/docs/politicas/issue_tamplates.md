@@ -100,5 +100,5 @@ Tabela de Versionamento
 
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|
-| 1.0    | 12/12/2024 | Criação inicial                       | LARYSSA FELIX |
+| 1.0    | 12/12/2024 | Criação inicial                       | Laryssa Felix |
 

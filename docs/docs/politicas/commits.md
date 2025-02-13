@@ -61,5 +61,5 @@ Tabela de Versionamento
 
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|
-| 1.0    | 09/12/2024 | Criação inicial                       | LARYSSA FELIX |
-| 1.1    | 11/12/2024 | Crorreções                       | LARYSSA FELIX |
+| 1.0    | 09/12/2024 | Criação inicial                       | Laryssa Felix |
+| 1.1    | 11/12/2024 | Crorreções                            | Laryssa Felix |

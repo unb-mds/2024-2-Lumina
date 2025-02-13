@@ -6,7 +6,7 @@
 
 ---
 
-## 📔 O que foi feito até aqui?  
+## 📔 O que foi feito até aqui?
 
 ### 📌 Configuração de Ambiente  
 A configuração inicial foi realizada utilizando **Docker** e **Docker Compose** para simplificar a instalação de dependências e isolar o ambiente de desenvolvimento.  
@@ -72,5 +72,5 @@ Tabela de Versionamento
 
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|
-| 1.0    | 28/11/2024 | Criação inicial                       | Gabriel Pinto |
-| 1.1    | 13/11/2024 | Atualização de Conteúdo               | Laryssa Felix |
+| 1.0    | 28/11/2024 | Criação inicial                       | Arthur Fernandes |
+| 1.1    | 13/11/2024 | Atualização de Conteúdo               | Caio Pacheco |
