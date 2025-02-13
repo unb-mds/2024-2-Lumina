@@ -1,55 +1,75 @@
+# 🌟 Guia de Contribuição - Lumina
 
-Antes de fazer qualquer alteração no repositório, crie uma issue e se responsabilize por essa alteração. Atente-se a [política de branchs](#)
-e a [política de commits](#). 
+Antes de fazer qualquer alteração no repositório, **crie uma issue e se responsabilize por essa alteração**.  
+Certifique-se de seguir a [política de branches](#) e a [política de commits](#).  
 
-## Histórico de versões
+---
 
-| Data       | Versão | Descrição                      | Autor             |
-| :--------: | :----: | :----------:                   | :---------------: |
-| 13/02/2025 |    1.0   | Envio inicial | [Arthur Fernandes](https://github.com/arthurfernandesj)|
+## 📌 Histórico de Versões  
 
-# Como contribuir?
+| Data       | Versão | Descrição        | Autor |
+|------------|--------|------------------|-----------------------------|
+| 13/02/2025 | 1.0    | Envio inicial    | [Arthur Fernandes](https://github.com/arthurfernandesj) |
 
-Para contribuir com o projeto, basta seguir os passos abaixo:
+---
 
-## 🛠 Issues
+# 🚀 Como Contribuir?  
 
-**Encontrando um problema:**
+Quer ajudar a melhorar o **Lumina**? Siga as instruções abaixo!  
 
-Se você identificar um problema na aplicação, verifique se já existe um problema relacionado. Se não existir, você pode abrir uma nova issue de **Bug Report** utilizando o [template disponível](https://github.com/unb-mds/2024-2-Lumina/issues/new/choose). Adicione o _label_ de `bug` a issue e siga as instruções contidas no template.
+## 🛠 Issues  
 
-**Resolver um problema:**
+### 🔍 Encontrando um Problema  
 
-Dê uma olhada em nossas [issues](https://github.com/unb-mds/2024-2-Lumina/issues) para encontrar uma que lhe interesse. Você pode refinar a pesquisa usando as `labels` como filtros e, se for a sua primeira issue, tente procurar por `good first issue`. Se encontrar um problema disponível para trabalhar, você é bem-vindo para abrir um [Pull Request](#pull-request).
+Se identificar um erro na aplicação, verifique se já existe uma **issue** relacionada.  
+Caso contrário, você pode abrir uma nova **Bug Report** utilizando o [template disponível](https://github.com/unb-mds/2024-2-Lumina/issues/new/choose).  
+Não se esqueça de adicionar a _label_ `bug` e seguir as instruções do template.  
 
-**Encontrando erros na documentação**
+### 🔧 Resolvendo um Problema  
 
-Caso você encontre algum erro na documentação, você pode abrir uma nova issue de **Docs repair** utilizando o [template disponível](https://github.com/unb-mds/2024-2-Lumina/issues/new/choose). Adicione o _label_ de `docs` a issue e siga as instruções contidas no template.
+1. Consulte as [issues disponíveis](https://github.com/unb-mds/2024-2-Lumina/issues) para encontrar uma que lhe interesse.  
+2. Utilize as _labels_ como filtros para facilitar a busca. Se for sua primeira contribuição, procure por `good first issue`.  
+3. Ao encontrar um problema que deseja resolver, **abra um Pull Request** seguindo as diretrizes abaixo.  
 
-**Como propor novas funcionalidades**
+### 📚 Encontrando Erros na Documentação  
 
-Para propor uma melhoria ou nova funcionalidade, você pode abrir uma nova issue de **Feature Request** utilizando o [template disponível](https://github.com/unb-mds/2024-2-Lumina/issues/new/choose) e adcionar o _label_ de `feature request` a issue. Sua sugestão será analisada e, se aprovada, será aberta uma _task_ para a implementação desta nova funcionalidade.
+Caso encontre erros na documentação, você pode abrir uma **Docs Repair Issue** utilizando o [template disponível](https://github.com/unb-mds/2024-2-Lumina/issues/new/choose).  
+Adicione a _label_ `docs` à issue e siga as instruções fornecidas no template.  
 
-**Como fazer alterações?**
+### 💡 Propondo Novas Funcionalidades  
 
-Para fazer alterações você deve, primeiramente, seguir os passos para [executar o projeto](#como-executar-o-projeto), e então:
+Se tiver uma ideia para melhorar o projeto, você pode abrir uma **Feature Request** utilizando o [template disponível](https://github.com/unb-mds/2024-2-Lumina/issues/new/choose).  
+Adicione a _label_ `feature request` e descreva sua sugestão de forma clara e objetiva.  
 
-- Usando o padrão GitHub Flow, crie uma branch apropriada para o que você irá implementar.
-- Faça os commits separados para cada escopo de modificação, além de adicionar uma mensagem correta e descritiva.
+---
 
-## ⚙️ Pull Request
+## 🛠 Como Fazer Alterações?  
 
-Quando terminar as alterações, crie uma pull request (PR).
+Antes de iniciar qualquer alteração, siga os passos para [executar o projeto](#como-executar-o-projeto).  
 
-- Não se esqueça de [vincular o PR a uma issue](https://github.com/unb-mds/2024-2-Lumina/issues) se estiver resolvendo uma.
-- Assim que enviar seu PR, um membro da equipe revisará sua proposta. Podemos fazer perguntas ou solicitar informações adicionais.
-- Podemos solicitar alterações antes que um PR possa ser aceito.
-- Conforme você atualiza seu PR e aplica alterações, marque cada conversa como [resolvida](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#resolving-conversations).
-- Se você encontrar conflitos no momento do merge, consulte este [tutorial do github](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) para ajudá-lo a resolver.
+1. Utilize o **GitHub Flow** e crie uma branch apropriada para sua implementação.  
+2. Faça **commits separados** para cada escopo de modificação, com mensagens claras e descritivas.  
 
-**Seu PR foi aceito!**
+---
 
-Parabéns 🎉. A equipe agradece!
+## ⚙️ Pull Request  
 
-## Dúvidas e sugestões
-Se você tiver alguma dúvida ou sugestão sobre como contribuir para o Lumina, sinta-se à vontade para entrar em contato com a equipe de desenvolvimento.
+Após concluir suas alterações, siga estas etapas para criar um **Pull Request (PR)**:  
+
+✅ **Vincule seu PR a uma issue** caso esteja resolvendo um problema.  
+✅ Após o envio, um membro da equipe revisará sua proposta.  
+✅ Podemos solicitar alterações ou mais informações antes da aprovação.  
+✅ Conforme você atualiza seu PR, **marque cada conversa como resolvida**.  
+✅ Se houver conflitos no merge, consulte este [tutorial do GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line).  
+
+### 🎉 Seu PR foi Aceito!  
+
+Parabéns! 🎉 A equipe do **Lumina** agradece sua contribuição!  
+
+---
+
+## 💬 Dúvidas e Sugestões  
+
+Se tiver alguma dúvida ou sugestão sobre como contribuir para o **Lumina**, sinta-se à vontade para entrar em contato com a equipe de desenvolvimento.  
+
+💡 **Toda ajuda é bem-vinda! Vamos construir algo incrível juntos!** 🚀  
