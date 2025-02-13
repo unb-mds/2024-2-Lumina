@@ -2,7 +2,7 @@
 name: Task
 about: Task a related to code or requeriments to be done
 title: ''
-labels: ''
+labels: task
 assignees: ''
 
 ---
