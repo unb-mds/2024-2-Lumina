@@ -2,37 +2,49 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: bug
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+# Relatório de Bug 🚨
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## 📝 Descrição do Problema  
+O sistema apresenta um erro ao tentar acessar a funcionalidade de login.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## 🔄 Como Reproduzir  
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+Passos para reproduzir o erro:  
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+1. Acesse a página de login em `URL_DO_SISTEMA`
+2. Insira as credenciais corretas e clique em **Entrar**
+3. Aguarde a página carregar completamente
+4. Observe a mensagem de erro ou comportamento inesperado  
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+## ✅ Comportamento Esperado  
 
-**Additional context**
-Add any other context about the problem here.
+O sistema deveria redirecionar corretamente para a página inicial após o login bem-sucedido.  
+
+## 📸 Capturas de Tela  
+
+Se possível, anexe capturas de tela para ilustrar melhor o problema.  
+
+## 🖥️ Ambiente  
+
+### **Desktop:**  
+- **Sistema Operacional:** Windows 10  
+- **Navegador:** Google Chrome  
+- **Versão:** Ex: 98.0.4758.102 
+
+### **Smartphone:**  
+- **Dispositivo:** iPhone 12  
+- **Sistema Operacional:** iOS 15.3  
+- **Navegador:** Safari  
+- **Versão:** Ex: 15.0.2
+
+## 🔍 Contexto Adicional  
+
+Este problema começou a ocorrer após a última atualização do sistema de gerenciamento de login. O objetivo é corrigir este erro para proporcionar uma experiência de usuário mais fluida durante o acesso ao sistema.  
+
+---
+📌 **Observação:** Caso precise de mais detalhes ou tenha alguma dúvida, estou à disposição!
