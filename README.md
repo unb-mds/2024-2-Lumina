@@ -81,7 +81,7 @@ Ao disponibilizar resultados claros e confiáveis, o Projeto Lumina não apenas 
 Para acessar a página web da nossa documentação [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/)
 
 ### 📲 Demais configurações
-- 📋 **Pré-requisitos:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/#pre-requisitos)
+- 📋 **Pré-requisitos:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/#pre-requisitos)]
 - 💻 **Ambiente:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/#ambiente-local)
 - ⚙️ **Configuração e Execução:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/#configuracao-e-execucao)
 
