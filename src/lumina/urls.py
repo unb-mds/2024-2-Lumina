@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from view import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('view.urls')),
+    path('plotly-chart/', views.plotly_chart_view, name='plotly_chart'),
 ]

@@ -1,5 +1,7 @@
+import plotly.express as px
 from django.shortcuts import render
-
+from scripts.get_df import get_proposal_df
+from Proposta.models import Proposta
 
 def index(request):
     return render(request, 'home.html')
@@ -55,3 +57,14 @@ def technology(request):
 
 def transportation(request):
     return render(request, 'transportation.html')
+
+
+def plotly_chart_view(request):
+    # Sample data
+    df = get_proposal_df(1149)
+    proposal_name = Proposta.objects.get(id=1149).titulo
+
+    fig = px.pie(df, values='Comentários', names='Opinião', title=proposal_name)
+
+    plotly_chart = fig.to_json()
+    return render(request, 'plotly_chart.html', {'plotly_chart': plotly_chart})
