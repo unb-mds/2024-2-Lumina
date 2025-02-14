@@ -24,8 +24,8 @@ Se você identificar uma vulnerabilidade de segurança, siga as instruções aba
 1. **Entre em contato** pelo e-mail [luminabrasilparticipativo@gmail.com](mailto:luminabrasilparticipativo@gmail.com).
 2. **Forneça detalhes técnicos**, incluindo uma descrição do problema e passos para reproduzi-lo.
 3. **Expectativas do processo:**
-   - Confirmaremos o recebimento do seu relatório em até **X dias**.
-   - Investigaremos a vulnerabilidade e daremos uma resposta preliminar em **X dias**.
+   - Confirmaremos o recebimento do seu relatório em até **5 dias**.
+   - Investigaremos a vulnerabilidade e daremos uma resposta preliminar o **mais rápido possível**.
    - Se validado, um patch será desenvolvido e implementado com a devida comunicação à comunidade.
 
 ## Boas Práticas de Segurança
