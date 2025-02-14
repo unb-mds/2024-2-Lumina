@@ -1,4 +1,3 @@
-
 .titles {
     color: #0653A1;
     font-size: 25px;
@@ -134,8 +133,43 @@ h2 {
 
 .capa{
     width: 100%; 
-    height: 100%;
+    height: 85vh;
+    background-color: #0653A1;
 }
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 91vh; 
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 83, 161, 0.5); 
+}
+
+.texto-overlay {
+    position: absolute;
+    top: 70%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 80px;
+    text-align:left;
+    font-family: Arial, sans-serif;
+    z-index: 2; 
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500; 
+    line-height: 1.2;
+
+}
+
 
 .pt-titulo{
     color: #007FFF;
@@ -193,4 +227,12 @@ h2 {
     color: #FE990D;
     font-size: 35px;
 
+}
+
+.featured-img {
+    width: 70%; /* Ajuste conforme necessário */
+    max-width: 450px; /* Define um limite para evitar imagens muito grandes */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
 }
