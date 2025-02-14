@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    background-color: #007FFF;
+
+}
+
+.nav-bar{
+    height: 40px;
+    display: flex;
+    justify-content: space-between; /* Mantém os elementos separados */
+    align-items: center;
+    padding: 1.5rem 6rem;
+}
+
+.logo{
+    margin: 0px;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Garante que a lista ocupe o espaço necessário */
+}
+
+.nav-list div {
+    flex-shrink: 0; /* Evita que a logo diminua */
+}
+
+.nav-list ul{
+    display: flex;
+    justify-content: flex-end; /* Move os itens para o final */
+    flex-grow: 1; /* Faz os itens ocuparem o espaço restante */
+    list-style: none; /* Remove as bolinhas */
+    padding: 0; /* Garante que não haja espaçamento extra */
+
+}
+
+.nav-item{
+    margin: 0 15px;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: white;
+    font-weight: 400;
+}
+
+.mobile-menu-icon{
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+@media screen and (max-width: 730px){
+    .nav-bar{
+        padding: 1.5rem 4rem;
+    }
+    .nav-item{
+        display: none;
+    }
+    .mobile-menu-icon{
+        display:  block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu-icon ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item{
+        display: block;
+        padding-top: 1.2rem;
+
+    }
+    .open{
+        display: block;
+    }
+}

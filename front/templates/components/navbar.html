@@ -1,0 +1,29 @@
+{% load static %}
+
+<header>
+  <nav class="nav-bar">
+
+    <div class="nav-list">
+      <div>
+        <img class="logo" src="{% static 'imgs/Logo.png' %}">
+      </div>
+  
+      <ul>
+        <li class="nav-item">
+          <a href="{% url 'index' %}" class="nav-link">Início</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'topics' %}" class="nav-link">Propostas</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a href="{% url 'selection' %}" class="nav-link">Análise</a>
+        </li> -->
+        <li class="nav-item">
+          <a href="{% url 'about' %}" class="nav-link">Sobre Nós</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script src="{% static 'js/navbar.js' %}"></script>

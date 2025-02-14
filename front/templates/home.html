@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+  </head>
+
+  <body>
+    {% include 'components/navbar.html' %}
+
+    <main>
+      <div class="overlay">
+        <img class="capa" src="{% static 'imgs/Capa.png' %}" alt="" />
+        <div class="texto-overlay">
+          Transforme opiniões em conhecimento com o Lumina
+      </div>
+      </div>
+      <h1 class="titles">
+        Explore o que está em alta e como isso impacta a política
+      </h1>
+      <div style="display: flex; flex-wrap: wrap">
+        <div style="flex: 1; margin-right: 20px">
+          <img class="featured-img" src="{% static 'imgs/Analise.png' %}" alt="" />
+          <h2>Análise de Sentimentos</h2>
+
+          <p class="center-text large-text">
+            Nossa tecnologia analisa os comentários das propostas do Brasil
+            Participativo, identificando se expressam apoio, crítica ou
+            neutralidade. Dessa forma, conseguimos revelar de maneira precisa o
+            impacto de cada ideia na sociedade. Com o Lumina, não se trata
+            apenas de números, mas da voz da população traduzida em dados claros
+            e acessíveis.
+          </p>
+        </div>
+        <div style="flex: 1">
+          <img class="featured-img"  src="{% static 'imgs/Analise.png' %}" alt="" />
+          <h2>Análises Recorrentes</h2>
+
+          <p class="center-text large-text">
+            Ao analisar diferentes áreas, como educação, saúde e meio ambiente,
+            identificamos os termos mais frequentes, revelando os temas que
+            estão no centro das discussões da sociedade. É uma forma simples e
+            visual de compreender as prioridades e preocupações de cada setor.
+          </p>
+        </div>
+      </div>
+      <h1>
+        <span class="highlight2">
+          O <span class="highlight">Brasil Participativo</span>: A fonte dos
+          dados do Lumina
+        </span>
+      </h1>
+
+      <div class="content">
+        <img
+          src="{% static 'imgs/Painel.png' %}"
+          alt="Painel do Brasil Participativo"
+          class="titles"
+        />
+        <p class="center-text large-text">
+          O site Brasil Participativo é uma plataforma do governo que permite
+          aos cidadãos contribuírem com ideias e opiniões para a construção de
+          políticas públicas. Nele, as pessoas podem propor sugestões, comentar
+          em propostas já existentes e votar nas iniciativas que consideram mais
+          relevantes. É uma ferramenta que promove a participação popular na
+          tomada de decisões, fortalecendo a democracia de forma colaborativa.
+        </p>
+      </div>
+
+      <h1 class="titles">
+        Como funciona a nossa <span class="highlight">Conexão</span>
+      </h1>
+
+      <div class="participate-container">
+        <div class="Text">
+          <h2 class="pt-titulo">
+            <span class="number"> 1º </span> Planos Participativos
+          </h2>
+
+          <p class="center-text large-text">
+            Os planos participativos são iniciativas que envolvem a sociedade na
+            elaboração de políticas públicas e diretrizes para o desenvolvimento
+            do país. Com o objetivo de atender demandas específicas e promover
+            maior transparência e inclusão.
+          </p>
+        </div>
+        <div class="Img">
+          <img
+            src="{% static 'imgs/PlanoParticipativo.jpeg' %}"
+            alt="Plano Participativo"
+          />
+        </div>
+      </div>
+
+      <div class="participate-container">
+        <div class="Text">
+          <h2 class="pt-titulo">
+            <span class="number"> 2º </span> Participe das discussões
+          </h2>
+          <p class="center-text large-text">
+            Leia as propostas, deixe comentários expressando sua opinião e
+            interaja com outros participantes.
+          </p>
+        </div>
+        <div class="Img">
+          <img
+            src="{% static 'imgs/PessoasBP.png' %}"
+            alt="Participantes Brasil Participativo"
+          />
+        </div>
+      </div>
+
+      <div class="participate-container">
+        <div class="Text">
+          <h2 class="pt-titulo">
+            <span class="number"> 3º </span> Análise de Sentimentos
+          </h2>
+          <p class="center-text large-text">
+            A partir dos comentários deixados no site, são utilizadas diferentes
+            tecnologias para realizar análises que revelam a quantidade de
+            pessoas com diferentes tipos de opinião sobre determinada proposta.
+          </p>
+        </div>
+        <div class="Img">
+          <img
+            src="{% static 'imgs/Sentimentos.png' %}"
+            alt="Análise de Sentimentos"
+          />
+        </div>
+      </div>
+
+      <div class="participate-container">
+        <div class="Text">
+          <h2 class="pt-titulo">
+            <span class="number"> 4º </span> Tópicos Recorrentes
+          </h2>
+          <p class="center-text large-text">
+            Com essa mesma tecnologia, é possível analisar as palavras mais
+            mencionadas pelas pessoas ao escreverem suas opiniões.
+          </p>
+        </div>
+        <div class="Img">
+          <img
+            src="{% static 'imgs/palavras.avif' %}"
+            alt="Análise de Sentimentos"
+          />
+        </div>
+      </div>
+
+      <h1 class="highlight2">
+        A <span class="highlight">Importância</span> do Nosso Projeto
+      </h1>
+      <p class="center-text large-text">
+        Um site como o Lumina, dedicado a promover a compreensão de questões
+        políticas, desempenha um papel crucial ao oferecer informações
+        acessíveis e confiáveis que capacitam os cidadãos a tomar decisões
+        informadas. Ao iluminar os caminhos da política, o Lumina ajuda a
+        construir uma sociedade mais crítica, inclusiva e comprometida com o
+        bem-estar coletivo. Dessa forma, ele se torna uma ferramenta
+        indispensável para promover a justiça social e a igualdade de
+        oportunidades em todas as esferas da sociedade.
+      </p>
+
+      <div class="partners-container">
+        <h1 class="highlight2">
+          Parceiros Que Fazem a <span class="highlight">Diferença</span>:
+        </h1>
+        <div class="partner-logos">
+          <img
+            src="{% static 'imgs/BPLogo.png' %}"
+            alt="Brasil Participativo"
+          />
+          <img
+            src="{% static 'imgs/UnBLogo.svg' %}"
+            alt="Universidade de Brasília"
+          />
+          <img src="{% static 'imgs/LabLivreLogo.png' %}" alt="Lab Livre" />
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    {% include 'components/footer.html' %}
+  </body>
+</html>

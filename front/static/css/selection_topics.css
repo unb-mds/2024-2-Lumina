@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.titles {
+    color: #0653A1;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #F25907;
+    text-align: center;
+}
+
+h4 {
+    color: #F25907;
+    text-align: center;
+    font-weight: bold;
+}
+
+.main-title {
+    font-size: 3rem;
+    color: #F25907;;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    color: #F25907;;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+/* Textos */
+p {
+    /* margin-top: 20px; */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+p.center-text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.text {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.Text h2 {
+    text-align: center;
+}
+
+/* Imagens */
+img {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Container principal */
+.container {
+    margin-bottom: 70px;
+}
+
+/* Estilo da grade de ícones */
+.icon-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.icon-card {
+    width: 200px;  /* Aumenta a largura do quadro */
+    height: 200px; /* Aumenta a altura do quadro */
+    background-color: #FFE4C4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.icon-card p {
+    font-size: 1rem;
+    color: #0056A2;
+    font-weight: 600;
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .icon-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon-card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .icon-card img {
+        width: 40px;
+        height: 40px;
+    }
+}
