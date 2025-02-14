@@ -5,8 +5,8 @@ FROM python:3
 WORKDIR /app
 
 # Variáveis de ambiente para o Python
-ENV PYTHONDONTWRITEBYTECODE=1  
-ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
 # Instalar as dependências
 COPY src/requirements.txt ./
@@ -17,4 +17,4 @@ COPY front/ ./
 COPY src/ ./
 
 # Expor a porta padrão do Django
-EXPOSE 8000 8501
+EXPOSE 8000

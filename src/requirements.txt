@@ -1,6 +1,5 @@
 # Python application dependencies
 django>=5.1.4
-streamlit>=1.42.0
 requests>=2.32.0
 
 # OpenAI
@@ -13,3 +12,5 @@ psycopg2-binary>=2.9.10
 # Para gráficos interativos
 plotly>=5.15.0
 altair>=4.2.2
+numpy>=1.21.0
+pandas>=1.3.0

@@ -1,4 +1,3 @@
-from django.contrib.gis.gdal.prototypes.geom import is_empty
 from pandas import DataFrame
 from comentario.models import Comentario
 

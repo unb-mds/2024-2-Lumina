@@ -19,5 +19,6 @@ urlpatterns = [
     path('politics/', views.politics, name='politics'),
     path('technology/', views.technology, name='technology'),
     path('transportation/', views.transportation, name='transportation'),
+    path('plotly-chart/', views.plotly_chart_view, name='plotly_chart'),
 ]
 

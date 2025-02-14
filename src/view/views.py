@@ -1,7 +1,7 @@
-import plotly.express as px
 from django.shortcuts import render
 from scripts.get_df import get_proposal_df
-from Proposta.models import Proposta
+from proposta.models import Proposta
+import plotly.express as px
 
 def index(request):
     return render(request, 'home.html')
@@ -61,8 +61,8 @@ def transportation(request):
 
 def plotly_chart_view(request):
     # Sample data
-    df = get_proposal_df(1149)
-    proposal_name = Proposta.objects.get(id=1149).titulo
+    df = get_proposal_df(1550)
+    proposal_name = Proposta.objects.get(id=1550).title
 
     fig = px.pie(df, values='Comentários', names='Opinião', title=proposal_name)
 
