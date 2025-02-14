@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'proposta',
     'comentario',
     'view',
-    'scripts',
+    'scripts'
 ]
 
 MIDDLEWARE = [

@@ -6,5 +6,5 @@ docker exec lumina-web python src/manage.py makemigrations
 echo "Apply database migrations" 
 docker exec lumina-web python src/manage.py migrate 
 # Create superuser
-echo "Create superuser"
-docker exec -lumina-web python src/manage.py createsuperuser
+echo "Create superuser" 
+docker exec lumina-web python src/manage.py createsuperuser 

@@ -16,7 +16,7 @@ class ComentarioAdmin(admin.ModelAdmin):
     def executar_analise(self, request, queryset):
         return redirect('admin:analise_sentimentos')
 
-    executar_analise.short_description = "Executar análise de sentimentos nos comentários selecionados"
+    executar_analise.short_description = "Executar análise de sentimentos nos comentários"
 
     def get_urls(self):
         urls = super().get_urls()

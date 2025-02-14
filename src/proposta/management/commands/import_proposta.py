@@ -26,6 +26,7 @@ class Command(BaseCommand):
                 title =  re.sub(r'\{"pt-BR":\s*"(.*)"\}', r'\1', row['Title']),
                 body =  re.sub(r'\{"pt-BR":\s*"(.*)"\}', r'\1', row['Body']),
                 comments_count =  row['Comments Count'],
+                topic = row['Topic']
             )
         
         self.stdout.write(self.style.SUCCESS(f"Successfully imported {len(data)} records"))

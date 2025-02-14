@@ -9,6 +9,7 @@ class Proposta(models.Model):
     title = models.CharField(max_length=1000, default='Proposal not found') #Title
     body = models.CharField(max_length=50000, default='Proposal not found') #Body
     comments_count = models.IntegerField(default=0) #Comments Count
+    topic = models.CharField(max_length=1000, default='Proposal not found') #Topic of the proposal
 
     def __str__(self):
         return self.title.get("pt-BR", "Título não definido")
