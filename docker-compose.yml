@@ -30,5 +30,3 @@ services:
 
 volumes:
   lumina_db_data:
-
-
