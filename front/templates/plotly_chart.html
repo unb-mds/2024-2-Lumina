@@ -11,7 +11,7 @@
 <div id="plotly-chart"></div>
 <script>
     // Parse the JSON-encoded Plotly chart data
-    const plotlyChart = JSON.parse('{{ plotly_chart|safe }}');
+    var plotlyChart = JSON.parse('{{ plotly_chart|safe }}');
 
     // Render the Plotly chart
     Plotly.newPlot('plotly-chart', plotlyChart.data, plotlyChart.layout);

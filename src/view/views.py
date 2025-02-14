@@ -74,7 +74,8 @@ def plotly_chart_view(request, proposal_id):
     df = get_proposal_df(proposal_id)
     proposal_name = Proposta.objects.get(id=proposal_id).title
 
-    fig = px.pie(df, values='Comentários', names='Opinião', title=proposal_name)
-
+    # fig = px.pie(df, values='Comentários', names='Opinião', title=proposal_name)
+    fig = px.bar(df, x='Comentários', y='Opinião', title=proposal_name, orientation='h')
     plotly_chart = fig.to_json()
+
     return render(request, 'plotly_chart.html', {'plotly_chart': plotly_chart})
