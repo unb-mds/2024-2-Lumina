@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/unb-mds/2024-2-Squad05)](https://img.shields.io/github/contributors/unb-mds/2024-2-Squad05)
-![]((https://img.shields.io/github/issues/unb-mds/2024-2-Squad05))
-![](https://img.shields.io/github/issues-closed/unb-mds/2024-2-Squad05.svg)
+[![GitHub contributors](https://img.shields.io/github/contributors/unb-mds/2024-2-Lumina)](https://img.shields.io/github/contributors/unb-mds/2024-2-Lumina)
+![]((https://img.shields.io/github/issues/unb-mds/2024-2-Lumina))
+![](https://img.shields.io/github/issues-closed/unb-mds/2024-2-Lumina.svg)
 
 ## Lumina Análise de Sentimentos - 2024.2 - Squad 05
 
@@ -71,19 +71,19 @@ Ao disponibilizar resultados claros e confiáveis, o Projeto Lumina não apenas 
 </center>
 
 ## 💻 Frameworks
-- 📋 **Backlog do projeto:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/documentation/productbacklog/)
-- 🎨 **Prototipação:**  [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/prototipo/prototipo/)
-- 🏛️ **Arquitetura:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/architecture/architecture/)
-- 🌳 **Configuração do Ambiente:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/)
-- 🙋 **Como contribuir:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/politicas/contribuicao/)
+- 📋 **Backlog do projeto:** [Clique aqui](https://unb-mds.github.io/2024-2-Lumina/documentation/productbacklog/)
+- 🎨 **Prototipação:**  [Clique aqui](https://unb-mds.github.io/2024-2-Lumina/prototipo/prototipo/)
+- 🏛️ **Arquitetura:** [Clique aqui](https://unb-mds.github.io/2024-2-Lumina/architecture/architecture/)
+- 🌳 **Configuração do Ambiente:** [Clique aqui](https://unb-mds.github.io/2024-2-Lumina/configuracao/configuracao/)
+- 🙋 **Como contribuir:** [Clique aqui](https://unb-mds.github.io/2024-2-Lumina/politicas/contribuicao/)
 
 ## 🗃️ Documentação
-Para acessar a página web da nossa documentação [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/)
+Para acessar a página web da nossa documentação [Clique aqui](https://unb-mds.github.io/2024-2-Lumina/)
 
 ### 📲 Demais configurações
-- 📋 **Pré-requisitos:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/#pre-requisitos)
-- 💻 **Ambiente:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/#ambiente-local)
-- ⚙️ **Configuração e Execução:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/#configuracao-e-execucao)
+- 📋 **Pré-requisitos:** [Clique aqui](https://unb-mds.github.io/2024-2-Lumina/configuracao/configuracao/#pre-requisitos)
+- 💻 **Ambiente:** [Clique aqui](https://unb-mds.github.io/2024-2-Lumina/configuracao/configuracao/#ambiente-local)
+- ⚙️ **Configuração e Execução:** [Clique aqui](https://unb-mds.github.io/2024-2-Lumina/configuracao/configuracao/#configuracao-e-execucao)
 
 ---
 Lumina é um software livre, disponível sob a licença MIT.
