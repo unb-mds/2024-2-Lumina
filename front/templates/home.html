@@ -16,13 +16,18 @@
     {% include 'components/navbar.html' %}
 
     <main>
-      <img class="capa" src="{% static 'imgs/Capa.png' %}" alt="" />
+      <div class="overlay">
+        <img class="capa" src="{% static 'imgs/Capa.png' %}" alt="" />
+        <div class="texto-overlay">
+          Transforme opiniões em conhecimento com o Lumina
+      </div>
+      </div>
       <h1 class="titles">
         Explore o que está em alta e como isso impacta a política
       </h1>
       <div style="display: flex; flex-wrap: wrap">
         <div style="flex: 1; margin-right: 20px">
-          <img src="{% static 'imgs/Analise.png' %}" alt="" />
+          <img class="featured-img" src="{% static 'imgs/Analise.png' %}" alt="" />
           <h2>Análise de Sentimentos</h2>
 
           <p class="center-text large-text">
@@ -35,7 +40,7 @@
           </p>
         </div>
         <div style="flex: 1">
-          <img src="{% static 'imgs/Analise.png' %}" alt="" />
+          <img class="featured-img"  src="{% static 'imgs/Analise.png' %}" alt="" />
           <h2>Análises Recorrentes</h2>
 
           <p class="center-text large-text">
