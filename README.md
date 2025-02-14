@@ -3,7 +3,7 @@
 ![]((https://img.shields.io/github/issues/unb-mds/2024-2-Lumina))
 ![](https://img.shields.io/github/issues-closed/unb-mds/2024-2-Lumina.svg)
 
-## Lumina Análise de Sentimentos - 2024.2 - Squad 05
+## Lumina Análise de Sentimentos - 2024.2 - Lumina
 
 ## 🔎 Sobre o Projeto: 
 
