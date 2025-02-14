@@ -2,6 +2,7 @@ from django.shortcuts import render
 from scripts.get_df import get_proposal_df
 from proposta.models import Proposta
 import plotly.express as px
+from django.urls import path
 
 def index(request):
     return render(request, 'home.html')
@@ -21,48 +22,57 @@ def topics(request):
 
 
 def health(request):
-    return render(request, 'health.html')
+    propostas = Proposta.objects.filter(topic='Saúde').order_by('-comments_count')
+    return render(request, 'health.html', {'propostas': propostas})
     
 def education(request):
-    return render(request, 'education.html')
+    propostas = Proposta.objects.filter(topic='Educação').order_by('-comments_count')
+    return render(request, 'education.html', {'propostas': propostas})
     
 def security(request):
-    return render(request, 'security.html')
+    propostas = Proposta.objects.filter(topic='Segurança').order_by('-comments_count')
+    return render(request, 'security.html', {'propostas': propostas})
     
 def environment(request):
-    return render(request, 'environment.html')
-    
-    
-    
+    propostas = Proposta.objects.filter(topic='Meio Ambiente').order_by('-comments_count')
+    return render(request, 'environment.html', {'propostas': propostas})
+
 def culture(request):
-    return render(request, 'culture.html')
+    propostas = Proposta.objects.filter(topic='Cultura').order_by('-comments_count')
+    return render(request, 'culture.html', {'propostas': propostas})
 
 def diversity(request):
-    return render(request, 'diversity.html')
+    propostas = Proposta.objects.filter(topic='Diversidade').order_by('-comments_count')
+    return render(request, 'diversity.html', {'propostas': propostas})
 
 def economy(request):
-    return render(request, 'economy.html')
+    propostas = Proposta.objects.filter(topic='Economia').order_by('-comments_count')
+    return render(request, 'economy.html' , {'propostas': propostas})
 
 def housing(request):
-    return render(request, 'housing.html')
+    propostas = Proposta.objects.filter(topic='Habitação').order_by('-comments_count')
+    return render(request, 'housing.html', {'propostas': propostas})
 
 def others(request):
-    return render(request, 'others.html')
+    propostas = Proposta.objects.filter(topic='Outros').order_by('-comments_count')
+    return render(request, 'others.html', {'propostas': propostas})
 
 def politics(request):
-    return render(request, 'politics.html')
+    propostas = Proposta.objects.filter(topic='Politica').order_by('-comments_count')
+    return render(request, 'politics.html', {'propostas': propostas})
 
 def technology(request):
-    return render(request, 'technology.html')
+    propostas = Proposta.objects.filter(topic='Tecnologia').order_by('-comments_count')
+    return render(request, 'technology.html', {'propostas': propostas})
 
 def transportation(request):
-    return render(request, 'transportation.html')
+    propostas = Proposta.objects.filter(topic='Transporte').order_by('-comments_count')
+    return render(request, 'transportation.html', {'propostas': propostas})
 
 
-def plotly_chart_view(request):
-    # Sample data
-    df = get_proposal_df(1550)
-    proposal_name = Proposta.objects.get(id=1550).title
+def plotly_chart_view(request, proposal_id):
+    df = get_proposal_df(proposal_id)
+    proposal_name = Proposta.objects.get(id=proposal_id).title
 
     fig = px.pie(df, values='Comentários', names='Opinião', title=proposal_name)
 

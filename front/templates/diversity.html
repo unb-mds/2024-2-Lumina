@@ -17,91 +17,23 @@
     
     <main>
 
+      <h1>Propostas na Categoria: Diversidade</h1>
 
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
+      {% for proposta in propostas %}
+      <div>
+        <h1>
+          {{ proposta.title }}
+          <a
+            class="propostas"
+            href="{% url 'plotly_chart_view' proposal_id=proposta.id %}"
+          >
+            Ver Analise</a
+          >
+        </h1>
+        <p>{{ proposta.body }}</p>
+        <p>Comentários: {{ proposta.comments_count }}</p>
+      </div>
+      {% endfor %}
 
         
     </main>

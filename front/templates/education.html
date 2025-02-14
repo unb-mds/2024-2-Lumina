@@ -1,153 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleção de Sentimentos</title>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educação</title>
+
     {% load static %}
 
     <link rel="stylesheet" href="{% static 'css/proposals.css' %}" />
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-</head>
+  </head>
 
-<body>
+  <body>
     {% include 'components/navbar.html' %}
-    
+
     <main>
-        <h1>Propostas na Categoria: Educação</h1>
-
- 
-
-
-
-        <div>
-            <h1>Retorno do Ciências Sem Fronteiras
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>Essa proposta refere-se ao retorno do Programa de pesquisa Ciência sem fronteiras, responsável por financiar a formação acadêmica e oferta de bolsa de iniciação científica no exterior para cursos de graduação e pôs- graduação, como meio de difusão da pesquisa brasileira e incentivo ao trabalho de jovens pesquisadores.</p>
-        </div>
-
-
-
-        <div>
-            <h1>Que Meninas e Mulheres tenham acesso a Educação 
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>Investir em educação para meninas e mulheres, incentivando a igualdade de gênero no acesso à educação, bem como o apoio para mulheres que desejam ingressar em carreiras científicas, tecnológicas, de engenharia e matemática (STEM)</p>
-        </div>
-
-
-
-
-        <div>
-            <h1>Educação Bilíngue Obrigatória (Português/Inglês)
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>Elevar a qualidade da educação tornando obrigatório aos cursos de licenciatura a matéria de língua inglesa, com o objetivo de formar professores bilíngues para uma educação bilíngue e obrigatória nos ensinos Fundamental e Médio. Deve ser trabalhado em conjunto com o Governo Federal, Estadual e Municipal. Intercâmbio linguístico deve ser promovido, trazendo nativos em língua inglesa para capacitar nossos futuros professores</p>
-        </div>
-
-
-
-
-        <div>
-            <h1>Educação inclusiva de qualidade
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>Tem como objetivo garantir que escolas tenham recursos adequados para atender às necessidades de todos os alunos, incluindo aqueles com deficiências. Isso pode incluir treinamento de professores, adaptações curriculares e disponibilidade de materiais didáticos acessíveis.</p>
-        </div>
-
-
-
-
-
-        <div>
-            <h1>Incentivo à Leitura entre Jovens
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>a leitura é fundamental para o desenvolvimento intelectual. criar programas de incentivo à leitura, incluindo clubes de leitura, bibliotecas acessíveis e campanhas de conscientização. recomendamos a promoção da leitura como uma atividade positiva entre os jovens, enriquecendo suas vidas e habilidades.</p>
-        </div>
-
-
-
-
-        <div>
-            <h1>Educação Financeira nas Escolas 
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>Incluir o ensino da educação financeira no currículo obrigatório dos ensinos fundamental e médio.</p>
-        </div>
-
-
-
-
-        <div>
-            <h1>Programa Nacional de Inteligência Artificial Educativa
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>Integra a Inteligência Artificial na educação para personalizar o ensino e melhorar o aprendizado dos jovens.</p>
-        </div>
-
-
-
-
-
-        <div>
-            <h1>Rede de bibliotecas de acesso livre para jovens
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>Estabelece uma rede de bibliotecas gratuitas para incentivar a leitura e o aprendizado entre os jovens.</p>
-        </div>
-
-
-
-
-          <div>
-            <h1>Jovens na Política 
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>programa que aplica ciências políticas, sociologia e filosofia a partir do primeiro ano do ensino médio para desenvolver o pensamento crítico dos jovens e assim aumentando sua participação em movimentos políticos e sociais.</p>
-        </div>
-           
-
-        <div>
-            <h1>Salário de professores
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>Todos os professores públicos devem ganhar salário equivalente ao professor universitário federal com os devidos acréscimos de titulação. Repasse do FUNDEB e demais fundos educacionais devem ser vinculados, priorizando o trabalho dos professores que devem cumprir metas de desempenho e atualização continua a serem estipuladas em âmbito federal. Só a educação salva um país.</p>
-        </div>
-
-
-
-          
-      
+      <h1>Propostas na Categoria: Educação</h1>
+      {% for proposta in propostas %}
+      <div>
+        <h1>
+          {{ proposta.title }}
+          <a
+            class="propostas"
+            href="{% url 'plotly_chart_view' proposal_id=proposta.id %}"
+          >
+            Ver Analise</a
+          >
+        </h1>
+        <p>{{ proposta.body }}</p>
+        <p>Comentários: {{ proposta.comments_count }}</p>
+      </div>
+      {% endfor %}
     </main>
 
-
-    </script>
     <!-- Footer -->
     {% include 'components/footer.html' %}
-    
-</body>
+  </body>
 </html>
