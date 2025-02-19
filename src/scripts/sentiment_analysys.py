@@ -231,7 +231,7 @@ def batch_analysis(since: datetime | None = None, max_comments: int = 500):
     # Wait for batch job to complete
     while True:
         status = batch_job.status
-
+        print(f"Curent Status: {status}")
         match status:
             case "validating" | "finalizing" | "cancelling":
                 sleep(15)
