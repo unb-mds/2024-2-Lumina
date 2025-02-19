@@ -152,7 +152,7 @@ def get_tasks_file(comment_list: QuerySet[Comentario]) -> str:
     # Create task list
     for comment in comment_list:
         task = {
-            "custom_id": comment.id,
+            "custom_id": str(comment.id),
             "method": "POST",
             "url": "/v1/chat/completions",
             "body": {
