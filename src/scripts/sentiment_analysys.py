@@ -149,6 +149,9 @@ def get_tasks_file(comment_list: QuerySet[Comentario]) -> str:
     tasks = []
     now = datetime.now()
 
+    # Create directory if it doesn't exist
+    os.makedirs('src/batch/source', exist_ok=True)
+
     # Create task list
     for comment in comment_list:
         task = {
@@ -176,7 +179,7 @@ def get_tasks_file(comment_list: QuerySet[Comentario]) -> str:
         }
         tasks.append(task)
 
-    file_name = f"batch/source/batch_{now.date().isoformat()}_{datetime.time(now)}.jsonl"
+    file_name = f"src/batch/source/batch_{now.date().isoformat()}_{datetime.time(now)}.jsonl"
 
     # Create file and write lines
     with open(file_name, 'w') as file:
@@ -248,9 +251,10 @@ def batch_analysis(since: datetime | None = None, max_comments: int = 500):
     result_file_id = batch_job.output_file_id
     result = client.files.content(result_file_id).content
 
-    result_file_name = "batch/result/" + file_name.split("/")[2].replace(".jsonl", "_result.jsonl")
+    result_file_name = "src/batch/result/" + file_name.split("/")[2].replace(".jsonl", "_result.jsonl")
 
     # Save result file
+    os.makedirs('src/batch/result', exist_ok=True)
     with open(result_file_name, 'wb') as file:
         file.write(result)
 

@@ -35,7 +35,7 @@ class ComentarioAdmin(admin.ModelAdmin):
             else:
                 data_inicio = None
             
-            serial_analysis(since=data_inicio, max_comments=max_comentarios)
+            batch_analysis(since=data_inicio, max_comments=max_comentarios)
 
             self.message_user(request, "Análise de sentimentos concluída!")
             return redirect("..")  # Retorna para a página principal do Admin
