@@ -2,6 +2,7 @@ import json
 from datetime import datetime, date
 from django.db.models import QuerySet
 from openai import OpenAI
+import glob
 from pydantic import BaseModel
 from comentario.models import Comentario
 from time import sleep
@@ -189,15 +190,46 @@ def get_tasks_file(comment_list: QuerySet[Comentario]) -> str:
     return file_name
 
 
-def save_to_db(results: list[dict], start_time: datetime):
+def save_to_db(results: list[dict], start_time: datetime) -> None:
     for result in results:
-        comment = Comentario.objects.get(id=result["custom_id"])
+        comment = Comentario.objects.get(id=int(result["custom_id"]))
         comment.sentiment = result["sentiment"]
         comment.analyzed_at = start_time
         comment.save()
 
 
-def serial_analysis(since: datetime | None = None, max_comments: int = 500, delay: int | float = 0):
+def read_results(file_name: str) -> list[dict]:
+    results = []
+    with open(file_name, 'r') as file:
+        for line in file:
+            # Parsing the JSON string into a dict and appending to the list of results
+            json_object = json.loads(line.strip())
+            results.append(json_object)
+    return results
+
+
+def save_jsonl(file_name: str) -> None:
+    results = read_results(file_name)
+    unix_creation_time = results[0]["response"]["body"]["created"]
+    save_to_db(results, datetime.fromtimestamp(unix_creation_time))
+
+
+def save_jsonl_files(file_name: str | None = None) -> None:
+    if file_name is None:
+        # Create the full path pattern to match .jsonl files
+        pattern = os.path.join("src/batch/result", '*.jsonl')
+
+        # Use glob to find all .jsonl files in the directory
+        jsonl_files = glob.glob(pattern)
+
+        # Iterate over each file found
+        for file_path in jsonl_files:
+            save_jsonl(file_path)
+    else:
+        save_jsonl(file_name)
+
+
+def serial_analysis(since: datetime | None = None, max_comments: int = 500, delay: int | float = 0) -> None:
     now = datetime.now()
     comment_list = get_comments(since, max_comments)
     for comment in comment_list:
@@ -259,12 +291,7 @@ def batch_analysis(since: datetime | None = None, max_comments: int = 500):
         file.write(result)
 
     # Parse result file as list of dicts
-    results = []
-    with open(result_file_name, 'r') as file:
-        for line in file:
-            # Parsing the JSON string into a dict and appending to the list of results
-            json_object = json.loads(line.strip())
-            results.append(json_object)
+    results = read_results(result_file_name)
 
     # Save results to database
     save_to_db(results, start_time)
