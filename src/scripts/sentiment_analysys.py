@@ -155,6 +155,10 @@ def get_tasks_file(comment_list: QuerySet[Comentario]) -> str:
 
     # Create task list
     for comment in comment_list:
+        comment_text = comment.body
+        if len(comment_text) > 1250:
+            comment_text = comment_text[:1250]
+
         task = {
             "custom_id": str(comment.id),
             "method": "POST",
@@ -173,7 +177,7 @@ def get_tasks_file(comment_list: QuerySet[Comentario]) -> str:
                     },
                     {
                         "role": "user",
-                        "content": comment.body
+                        "content": comment_text
                     }
                 ],
             }
