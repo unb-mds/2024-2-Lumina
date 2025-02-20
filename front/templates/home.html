@@ -13,15 +13,17 @@
   </head>
 
   <body>
-    {% include 'components/navbar.html' %}
-
-    <main>
+    <div class="container-capa">
+      {% include 'components/navbar.html' %}
+    <!-- <main> -->
       <div class="overlay">
-        <img class="capa" src="{% static 'imgs/Capa.png' %}" alt="" />
-        <div class="texto-overlay">
-          Transforme opiniões em conhecimento com o Lumina
+        <img class="capa" src="{% static 'imgs/NewCapa.png' %}" alt="" />
+          <div class="texto-overlay">
+            Transforme opiniões em conhecimento com o Lumina
+          </div>
       </div>
-      </div>
+    </div>
+
       <h1 class="titles">
         Explore o que está em alta e como isso impacta a política
       </h1>
@@ -39,17 +41,6 @@
             e acessíveis.
           </p>
         </div>
-        <div style="flex: 1">
-          <img class="featured-img"  src="{% static 'imgs/Analise.png' %}" alt="" />
-          <h2>Análises Recorrentes</h2>
-
-          <p class="center-text large-text">
-            Ao analisar diferentes áreas, como educação, saúde e meio ambiente,
-            identificamos os termos mais frequentes, revelando os temas que
-            estão no centro das discussões da sociedade. É uma forma simples e
-            visual de compreender as prioridades e preocupações de cada setor.
-          </p>
-        </div>
       </div>
       <h1>
         <span class="highlight2">
@@ -58,20 +49,27 @@
         </span>
       </h1>
 
-      <div class="content">
+      <div class="card">
         <img
           src="{% static 'imgs/Painel.png' %}"
           alt="Painel do Brasil Participativo"
-          class="titles"
+          class="card-image"
         />
-        <p class="center-text large-text">
-          O site Brasil Participativo é uma plataforma do governo que permite
-          aos cidadãos contribuírem com ideias e opiniões para a construção de
-          políticas públicas. Nele, as pessoas podem propor sugestões, comentar
-          em propostas já existentes e votar nas iniciativas que consideram mais
-          relevantes. É uma ferramenta que promove a participação popular na
-          tomada de decisões, fortalecendo a democracia de forma colaborativa.
-        </p>
+        <div class="card-content">
+          <p class="center-text large-text">
+            O site Brasil Participativo é uma plataforma do governo que permite
+            aos cidadãos contribuírem com ideias e opiniões para a construção de
+            políticas públicas. Nele, as pessoas podem propor sugestões, comentar
+            em propostas já existentes e votar nas iniciativas que consideram mais
+            relevantes. É uma ferramenta que promove a participação popular na
+            tomada de decisões, fortalecendo a democracia de forma colaborativa.
+          </p>
+          <div class="container-btn">
+            <a href="https://brasilparticipativo.presidencia.gov.br/" target="_blank" class="btn">
+              Acesse o Brasil Participativo
+            </a>
+          </div>
+        </div>
       </div>
 
       <h1 class="titles">
@@ -136,7 +134,7 @@
         </div>
       </div>
 
-      <div class="participate-container">
+      <!-- <div class="participate-container">
         <div class="Text">
           <h2 class="pt-titulo">
             <span class="number"> 4º </span> Tópicos Recorrentes
@@ -152,7 +150,7 @@
             alt="Análise de Sentimentos"
           />
         </div>
-      </div>
+      </div> -->
 
       <h1 class="highlight2">
         A <span class="highlight">Importância</span> do Nosso Projeto
@@ -184,7 +182,7 @@
           <img src="{% static 'imgs/LabLivreLogo.png' %}" alt="Lab Livre" />
         </div>
       </div>
-    </main>
+    <!-- </main> -->
 
     <!-- Footer -->
     {% include 'components/footer.html' %}

@@ -1,96 +1,159 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-header{
+header {
     background-color: #007FFF;
-
 }
 
-.nav-bar{
+.nav-bar {
     height: 40px;
     display: flex;
-    justify-content: space-between; /* Mantém os elementos separados */
+    justify-content: space-between;
     align-items: center;
     padding: 1.5rem 6rem;
 }
 
-.logo{
-    margin: 0px;
+.logo {
+    width: 100px;
+    height: 80px;
 }
 
-.nav-list{
+.nav-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%; /* Garante que a lista ocupe o espaço necessário */
+    width: 100%;
 }
 
 .nav-list div {
-    flex-shrink: 0; /* Evita que a logo diminua */
+    flex-shrink: 0;
 }
 
-.nav-list ul{
+.nav-list ul {
     display: flex;
-    justify-content: flex-end; /* Move os itens para o final */
-    flex-grow: 1; /* Faz os itens ocuparem o espaço restante */
-    list-style: none; /* Remove as bolinhas */
-    padding: 0; /* Garante que não haja espaçamento extra */
-
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    align-items: center;
 }
 
-.nav-item{
+.nav-item {
     margin: 0 15px;
 }
 
-.nav-link{
+.nav-link {
     text-decoration: none;
     font-size: 1.15rem;
     color: white;
     font-weight: 400;
 }
 
-.mobile-menu-icon{
+.mobile-menu-icon {
     display: none;
 }
 
-.mobile-menu{
+.mobile-menu {
     display: none;
 }
 
-@media screen and (max-width: 730px){
-    .nav-bar{
+.itens {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.name {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-right: auto;
+    margin-left: 2px;
+}
+/* 
+@media screen and (max-width: 730px) {
+    .nav-bar {
         padding: 1.5rem 4rem;
     }
-    .nav-item{
+
+    .nav-item {
         display: none;
     }
-    .mobile-menu-icon{
-        display:  block;
+
+    .mobile-menu-icon {
+        display: block;
     }
+
     .mobile-menu-icon button {
         background-color: transparent;
         border: none;
         cursor: pointer;
     }
 
-    .mobile-menu-icon ul{
+    .mobile-menu-icon ul {
         display: flex;
         flex-direction: column;
         text-align: center;
         padding-bottom: 1rem;
     }
 
-    .mobile-menu .nav-item{
+    .mobile-menu .nav-item {
         display: block;
         padding-top: 1.2rem;
-
     }
-    .open{
+
+    .open {
         display: block;
+    }
+} */
+
+@media screen and (max-width: 800px) {
+    .nav-bar {
+        padding: 1.5rem 3rem; 
+    }
+
+    .nav-list ul {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block; 
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: white; 
+        font-size: 1.8rem; 
+    }
+
+    .mobile-menu {
+        display: none; /* Esconde o menu móvel por padrão */
+        flex-direction: column;
+        background-color: #007FFF; /* Cor de fundo do menu móvel */
+        position: absolute;
+        top: 80px; /* Ajuste conforme a altura do header */
+        right: 0;
+        width: 100%; /* Largura total */
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar o menu */
+    }
+    
+    .mobile-menu.open {
+        display: flex; /* Exibe o menu móvel quando a classe 'open' está presente */
+    }
+
+    .mobile-menu .nav-item {
+        padding: 0.5rem 0; 
+        text-align: center;
+    }
+
+    .mobile-menu .nav-link {
+        font-size: 1.2rem;
     }
 }
