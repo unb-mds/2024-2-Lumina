@@ -151,7 +151,7 @@ def get_tasks_file(comment_list: QuerySet[Comentario]) -> str:
     now = datetime.now()
 
     # Create directory if it doesn't exist
-    os.makedirs('src/batch/source', exist_ok=True)
+    os.makedirs('src/script/batch/source', exist_ok=True)
 
     # Create task list
     for comment in comment_list:
@@ -180,7 +180,7 @@ def get_tasks_file(comment_list: QuerySet[Comentario]) -> str:
         }
         tasks.append(task)
 
-    file_name = f"src/batch/source/batch_{now.date().isoformat()}_{datetime.time(now)}.jsonl"
+    file_name = f"src/scripts/batch/source/batch_{now.date().isoformat()}_{datetime.time(now)}.jsonl"
 
     # Create file and write lines
     with open(file_name, 'w') as file:
@@ -193,7 +193,8 @@ def get_tasks_file(comment_list: QuerySet[Comentario]) -> str:
 def save_to_db(results: list[dict], start_time: datetime) -> None:
     for result in results:
         comment = Comentario.objects.get(id=int(result["custom_id"]))
-        comment.sentiment = result["sentiment"]
+        sentiment = json.loads(result["response"]["body"]["choices"][0]["message"]["content"])["sentiment"]
+        comment.sentiment = sentiment
         comment.analyzed_at = start_time
         comment.save()
 
@@ -216,12 +217,13 @@ def save_jsonl(file_name: str) -> None:
 
 def save_jsonl_files(file_name: str | None = None) -> None:
     if file_name is None:
+        print("Processing all files in the directory")
         # Create the full path pattern to match .jsonl files
-        pattern = os.path.join("src/batch/result", '*.jsonl')
+        pattern = os.path.join("src/scripts/batch/result", '*.jsonl')
 
         # Use glob to find all .jsonl files in the directory
         jsonl_files = glob.glob(pattern)
-
+        print(f"Found {len(jsonl_files)} files")
         # Iterate over each file found
         for file_path in jsonl_files:
             print(f"Processing file: {file_path}")
@@ -291,10 +293,10 @@ def end_batch_analysis(batch_job, file_name, start_time) -> None:
     result_file_id = batch_job.output_file_id
     result = client.files.content(result_file_id).content
 
-    result_file_name = "src/batch/result/" + file_name.split("/")[2].replace(".jsonl", "_result.jsonl")
+    result_file_name = "src/scripts/batch/result/" + file_name.split("/")[2].replace(".jsonl", "_result.jsonl")
 
     # Save result file
-    os.makedirs('src/batch/result', exist_ok=True)
+    os.makedirs('src/scripts/batch/result', exist_ok=True)
     with open(result_file_name, 'wb') as file:
         file.write(result)
 

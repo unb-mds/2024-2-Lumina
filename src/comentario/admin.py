@@ -10,7 +10,7 @@ from scripts.sentiment_analysys import start_batch_analysis, save_jsonl_files
 
 class ComentarioAdmin(admin.ModelAdmin):
     list_display = ('body', 'sentiment', 'updated_at', 'analyzed_at')
-    ordering = ('analyzed_at')
+    ordering = ('updated_at',)
     actions = ['iniciar_analise', 'finalizar_analise']
 
     def get_urls(self):
@@ -27,7 +27,7 @@ class ComentarioAdmin(admin.ModelAdmin):
 
     iniciar_analise.short_description = "Iniciar análise de sentimentos"
 
-    def iniciar_analise(self, request):
+    def iniciar_analise(self, request, queryset):
         if request.method == "POST":
             data_inicio = request.POST.get("data_inicio", None)
             max_comentarios = int(request.POST.get("max_comentarios", 500))
@@ -45,12 +45,12 @@ class ComentarioAdmin(admin.ModelAdmin):
         return TemplateResponse(request, "admin/iniciar_analise.html", {})
     
     # Função para finalizar a análise de sentimentos
-    def finalizar_analise(self, request):
+    def finalizar_analise(self, request, queryset):
         return redirect('admin:finalizar_analise')
 
     finalizar_analise.short_description = "Finalizar a análise de sentimentos"
 
-    def finalizar_analise(self, request):
+    def finalizar_analise(self, request, queryset):
         # batch_job_id = request.session.get('batch_job_id')
         # file_name = request.session.get('file_name')
         # start_time = datetime.fromisoformat(request.session.get('start_time'))
