@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.template.response import TemplateResponse
 from datetime import datetime
 from .models import Comentario
-from scripts.sentiment_analysys import serial_analysis, batch_analysis 
+from scripts.sentiment_analysys import serial_analysis, start_batch_analysis
 
 class ComentarioAdmin(admin.ModelAdmin):
     list_display = ('body', 'sentiment', 'updated_at', 'analyzed_at')
@@ -34,8 +34,8 @@ class ComentarioAdmin(admin.ModelAdmin):
                 data_inicio = datetime.strptime(data_inicio, "%Y-%m-%d")
             else:
                 data_inicio = None
-            
-            batch_analysis(since=data_inicio, max_comments=max_comentarios)
+
+            start_batch_analysis(since=data_inicio, max_comments=max_comentarios)
 
             self.message_user(request, "Análise de sentimentos concluída!")
             return redirect("..")  # Retorna para a página principal do Admin
