@@ -1,0 +1,7 @@
+{% extends "admin/base_site.html" %} {% block content %}
+<h1>Finalizar Análise de Sentimentos</h1>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Finalizar Análise e Salvar no Banco de Dados</button>
+</form>
+{% endblock %}

@@ -6,26 +6,28 @@ from django.http import HttpResponse
 from django.template.response import TemplateResponse
 from datetime import datetime
 from .models import Comentario
-from scripts.sentiment_analysys import serial_analysis, start_batch_analysis
+from scripts.sentiment_analysys import start_batch_analysis, save_jsonl_files
 
 class ComentarioAdmin(admin.ModelAdmin):
     list_display = ('body', 'sentiment', 'updated_at', 'analyzed_at')
-    ordering = ('updated_at',)
-    actions = ['executar_analise']
-
-    def executar_analise(self, request, queryset):
-        return redirect('admin:analise_sentimentos')
-
-    executar_analise.short_description = "Executar análise de sentimentos nos comentários"
+    ordering = ('analyzed_at')
+    actions = ['iniciar_analise', 'finalizar_analise']
 
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
-            path('analise-sentimentos/', self.admin_site.admin_view(self.analise_sentimentos), name="analise_sentimentos"),
+            path('iniciar-analise/', self.admin_site.admin_view(self.iniciar_analise), name="iniciar_analise"),
+            path('finalizar-analise/', self.admin_site.admin_view(self.finalizar_analise), name="finalizar_analise"),
         ]
         return custom_urls + urls
+    
+    # Função para executar a análise de sentimentos
+    def iniciar_analise(self, request, queryset):
+        return redirect('admin:iniciar_analise')
 
-    def analise_sentimentos(self, request):
+    iniciar_analise.short_description = "Iniciar análise de sentimentos"
+
+    def iniciar_analise(self, request):
         if request.method == "POST":
             data_inicio = request.POST.get("data_inicio", None)
             max_comentarios = int(request.POST.get("max_comentarios", 500))
@@ -37,9 +39,37 @@ class ComentarioAdmin(admin.ModelAdmin):
 
             start_batch_analysis(since=data_inicio, max_comments=max_comentarios)
 
-            self.message_user(request, "Análise de sentimentos concluída!")
+            self.message_user(request, "Análise de sentimentos enviada para openai batch!")
             return redirect("..")  # Retorna para a página principal do Admin
 
-        return TemplateResponse(request, "admin/analise_sentimentos.html", {})
+        return TemplateResponse(request, "admin/iniciar_analise.html", {})
+    
+    # Função para finalizar a análise de sentimentos
+    def finalizar_analise(self, request):
+        return redirect('admin:finalizar_analise')
+
+    finalizar_analise.short_description = "Finalizar a análise de sentimentos"
+
+    def finalizar_analise(self, request):
+        # batch_job_id = request.session.get('batch_job_id')
+        # file_name = request.session.get('file_name')
+        # start_time = datetime.fromisoformat(request.session.get('start_time'))
+        
+        
+        # if batch_job_id and file_name and start_time:
+        #     client = OpenAI(api_key=os.getenv("LUMINA_OPENAI_API_KEY"))
+        #     batch_job = client.batches.retrieve(batch_job_id)
+        #     end_batch_analysis(batch_job, file_name, start_time)
+        #     save_jsonl_files()
+
+        #     self.message_user(request, "Análise de sentimentos finalizada e resultados salvos no banco de dados!")
+        # else:
+        #     self.message_user(request, "Erro ao finalizar a análise. Informações de sessão ausentes.", level='error')
+        
+        save_jsonl_files()
+        
+        self.message_user(request, "Análise de sentimentos salva no Banco de Dados!")
+
+        return redirect("..") 
 
 admin.site.register(Comentario, ComentarioAdmin)
