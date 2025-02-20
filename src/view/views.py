@@ -167,7 +167,12 @@ def plotly_chart_view(request, proposal_id):
     proposal_name = proposal.title
     comments = proposal.comentarios.all()  # Corrigir o acesso aos comentários
 
-    fig = px.pie(df, values='Comentários', names='Opinião', title=proposal_name)
+    fig = px.pie(df, values='Comentários', names='Opinião', title=proposal_name, color='Opinião',
+                 color_discrete_map={'Muito Positiva': 'royalblue',
+                                     'Positiva': 'cyan',
+                                     'Neutra': 'lightcyan',
+                                     'Negativa': 'darkblue',
+                                     'Muito Negativa': 'midnightblue'})
     plot_div = plot(fig, output_type='div')
 
     return render(request, 'plotly_chart.html', {'plot_div': plot_div, 'comments': comments})
