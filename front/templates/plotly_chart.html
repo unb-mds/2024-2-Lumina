@@ -9,5 +9,12 @@
 {% autoescape off %}
     {{ plot_div }}
 {% endautoescape %}
+
+<h2>Comentários</h2>
+<ul>
+    {% for comment in comments %}
+    <li>{{ comment.sentiment }}: {{ comment.body }}</li>  <!-- Corrigir o campo do texto do comentário -->
+    {% endfor %}
+</ul>
 </body>
 </html>

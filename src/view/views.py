@@ -90,11 +90,11 @@ def transportation(request):
 def plotly_chart_view(request, proposal_id):
     data = get_proposal_dic(proposal_id)
     df = get_proposal_df(proposal_id)
-    proposal_name = Proposta.objects.get(id=proposal_id).title
+    proposal = Proposta.objects.get(id=proposal_id)
+    proposal_name = proposal.title
+    comments = proposal.comentarios.all()  # Corrigir o acesso aos comentários
 
     fig = px.pie(df, values='Comentários', names='Opinião', title=proposal_name)
-
-    # fig = go.Figure(data=[go.Pie(labels=data['Opinião'], values=data['Comentários'])])
     plot_div = plot(fig, output_type='div')
 
-    return render(request, 'plotly_chart.html', {'plot_div': plot_div})
+    return render(request, 'plotly_chart.html', {'plot_div': plot_div, 'comments': comments})
