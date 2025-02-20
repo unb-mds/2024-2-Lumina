@@ -16,95 +16,19 @@
     {% include 'components/navbar.html' %}
     
     <main>
+        <h1>Propostas na Categoria: Outros</h1>
+        {% for proposta in propostas %}
         <div>
             <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
+                {{ proposta.title }}
             </h1>
-          <p>  </p>
+            <p>{{ proposta.body }}</p>
+            <p>Comentários: {{ proposta.comments_count }}</p>
+            <a class="propostas" href="{% url 'plotly_chart_view' proposal_id=proposta.id %}"> Ver Analise</a>
         </div>
-
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
-        <div>
-            <h1>
-                   <a class="propostas" href="#">
-            Ver Analise 
-          </a> 
-            </h1>
-          <p>  </p>
-        </div>
-
+        {% endfor %}
     </main>
-
-
-    </script>
+    
     <!-- Footer -->
     {% include 'components/footer.html' %}
     

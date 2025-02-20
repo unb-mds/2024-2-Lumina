@@ -7,20 +7,26 @@
     
     {% load static %}
 
-    <link rel="stylesheet" href="{% static 'css/selection_page_feelings.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/proposals.css' %}" />
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
 </head>
 
 <body>
     {% include 'components/navbar.html' %}
-    
+
     <main>
-        
-    </main>
-
-
-    </script>
+        <h1>Propostas na Categoria: Transporte</h1>
+        {% for proposta in propostas %}
+        <div>
+            <h1>
+                {{ proposta.title }}
+            </h1>
+            <p>{{ proposta.body }}</p>
+            <p>Comentários: {{ proposta.comments_count }}</p>
+            <a class="propostas" href="{% url 'plotly_chart_view' proposal_id=proposta.id %}">Ver Analise</a>
+        </div>
+        {% endfor %}
     <!-- Footer -->
     {% include 'components/footer.html' %}
     

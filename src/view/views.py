@@ -5,6 +5,7 @@ import plotly.express as px
 from plotly.offline import plot
 import plotly.graph_objs as go
 from django.urls import path
+from django.db.utils import OperationalError
 
 
 def index(request):
@@ -28,62 +29,134 @@ def topics(request):
 
 
 def health(request):
-    propostas = Proposta.objects.filter(topic='Saúde').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Saúde').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'health.html', {'propostas': propostas})
 
 
 def education(request):
-    propostas = Proposta.objects.filter(topic='Educação').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Educação').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'education.html', {'propostas': propostas})
 
 
 def security(request):
-    propostas = Proposta.objects.filter(topic='Segurança').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Segurança').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'security.html', {'propostas': propostas})
 
 
 def environment(request):
-    propostas = Proposta.objects.filter(topic='Meio Ambiente').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Meio Ambiente').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'environment.html', {'propostas': propostas})
 
 
 def culture(request):
-    propostas = Proposta.objects.filter(topic='Cultura').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Cultura').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'culture.html', {'propostas': propostas})
 
 
 def diversity(request):
-    propostas = Proposta.objects.filter(topic='Diversidade').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Diversidade').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'diversity.html', {'propostas': propostas})
 
 
 def economy(request):
-    propostas = Proposta.objects.filter(topic='Economia').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Economia').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'economy.html', {'propostas': propostas})
 
 
 def housing(request):
-    propostas = Proposta.objects.filter(topic='Habitação').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Habitação').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'housing.html', {'propostas': propostas})
 
 
 def others(request):
-    propostas = Proposta.objects.filter(topic='Outros').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Outros').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'others.html', {'propostas': propostas})
 
 
 def politics(request):
-    propostas = Proposta.objects.filter(topic='Politica').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Politica').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'politics.html', {'propostas': propostas})
 
 
 def technology(request):
-    propostas = Proposta.objects.filter(topic='Tecnologia').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Tecnologia').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'technology.html', {'propostas': propostas})
 
 
 def transportation(request):
-    propostas = Proposta.objects.filter(topic='Transporte').order_by('-comments_count')
+    try:
+        propostas = Proposta.objects.filter(topic='Transporte').order_by('-comments_count')
+        if not propostas.exists():
+            raise Proposta.DoesNotExist
+    except (OperationalError, Proposta.DoesNotExist):
+        error_message = "Erro: Não há propostas disponíveis ou as migrações não foram realizadas."
+        return render(request, 'error.html', {'error_message': error_message})
     return render(request, 'transportation.html', {'propostas': propostas})
 
 

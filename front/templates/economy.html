@@ -20,15 +20,10 @@
       <div>
         <h1>
           {{ proposta.title }}
-          <a
-            class="propostas"
-            href="{% url 'plotly_chart_view' proposal_id=proposta.id %}"
-          >
-            Ver Analise</a
-          >
         </h1>
         <p>{{ proposta.body }}</p>
         <p>Comentários: {{ proposta.comments_count }}</p>
+        <a class="propostas" href="{% url 'plotly_chart_view' proposal_id=proposta.id %}"> Ver Analise</a>
       </div>
       {% endfor %}
     </main>
