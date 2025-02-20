@@ -21,12 +21,17 @@ class Command(BaseCommand):
         for index, row in data.iterrows():
             proposta_id = row['Decidim Root Commentable ID']
             proposta, created = Proposta.objects.get_or_create(component_id = proposta_id)
+            
+            body = row['Body']
+            body = re.sub(r'\{"pt-BR":\s*"(.*)"\}', r'\1', body)
+            body = re.sub(r'(\n|\t)', '', body)
+            body = re.sub(r'(\")', '"', body)
 
             Comentario.objects.create (
                 commentable_type = row['Decidim Commentable Type'],
                 commentable_id = row['ID'],
                 author_id = row['Decidim Author ID'],
-                body = re.sub(r'\{"pt-BR":\s*"(.*)"\}', r'\1', row['Body']),
+                body = body,
                 created_at = row['Created At'],
                 updated_at = row['Updated At'],
                 proposta = proposta

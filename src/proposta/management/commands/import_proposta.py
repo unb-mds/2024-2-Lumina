@@ -16,15 +16,21 @@ class Command(BaseCommand):
         # Read CSV using pandas
         data = pd.read_csv(csv_file)
 
+
         # Loop over rows in CSV
         for index, row in data.iterrows():
+            body = row['Body']
+            body = re.sub(r'\{"pt-BR":\s*"(.*)"\}', r'\1', body)
+            body = re.sub(r'(\n|\t)', '', body)
+            body = re.sub(r'(\")', '"', body)
+
             Proposta.objects.create (
                 component_id =  row['ID'],
                 created_at =  row['Created At'],
                 updated_at =  row['Updated At'],
                 votes_count = row['Proposal Votes Count'],
                 title =  re.sub(r'\{"pt-BR":\s*"(.*)"\}', r'\1', row['Title']),
-                body =  re.sub(r'\{"pt-BR":\s*"(.*)"\}', r'\1', row['Body']),
+                body = body,
                 comments_count =  row['Comments Count'],
                 topic = row['Topic']
             )
