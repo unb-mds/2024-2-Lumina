@@ -240,7 +240,7 @@ def serial_analysis(since: datetime | None = None, max_comments: int = 500, dela
         sleep(delay)
 
 
-def batch_analysis(since: datetime | None = None, max_comments: int = 500):
+def start_batch_analysis(since: datetime | None = None, max_comments: int = 500) -> tuple:
     # Initialize OpenAI client and variables
     client = OpenAI(api_key=os.getenv("LUMINA_OPENAI_API_KEY"))
     comment_list = get_comments(since, max_comments)
@@ -262,7 +262,14 @@ def batch_analysis(since: datetime | None = None, max_comments: int = 500):
 
     # Retrieve batch object
     batch_job = client.batches.retrieve(batch_job.id)
+    print(f"Batch Job ID: {batch_job.id}")
+    print(f"Batch Job Status: {batch_job.status}")
+    print(f"Start Time: {start_time}")
+    return batch_job, file_name, start_time
 
+
+def end_batch_analysis(batch_job, file_name, start_time) -> None:
+    client = OpenAI(api_key=os.getenv("LUMINA_OPENAI_API_KEY"))
     # Wait for batch job to complete
     while True:
         status = batch_job.status
