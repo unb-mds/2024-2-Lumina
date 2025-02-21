@@ -207,18 +207,30 @@ def read_results(file_name: str) -> list[dict]:
     results = []
     with open(file_name, 'r') as file:
         for line in file:
-            # Parsing the JSON string into a dict and appending to the list of results
             try:
+                # Parsing the JSON string into a dict and appending to the list of results
                 json_object = json.loads(line.strip())
                 results.append(json_object)
             except json.JSONDecodeError:
-                print(f"Error decoding JSON: {line}")
-                print("Skipping this line.")
-
+                print(f"Erro ao decodificar JSON na linha: {line.strip()}")
     return results
 
 
+def validate_jsonl(file_name: str) -> bool:
+    with open(file_name, 'r') as file:
+        for line in file:
+            try:
+                json.loads(line.strip())
+            except json.JSONDecodeError:
+                return False
+    return True
+
+
 def save_jsonl(file_name: str) -> None:
+    if not validate_jsonl(file_name):
+        print(f"Erro: O arquivo {file_name} não segue o padrão JSONL esperado.")
+        return
+
     results = read_results(file_name)
     unix_creation_time = results[0]["response"]["body"]["created"]
     save_to_db(results, datetime.fromtimestamp(unix_creation_time))
