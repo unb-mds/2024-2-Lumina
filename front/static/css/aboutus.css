@@ -7,6 +7,75 @@ body {
     padding: 0;
 }
 
+
+.capa{
+    width: 100%; 
+    height: 85vh;
+    background-color: #0653A1;
+    border-radius: 10px; 
+    object-fit: cover;
+}
+
+.container-capa{
+    border-radius: 60px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 85.5vh; 
+    border-radius: 100px; 
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 83, 161, 0.5); 
+}
+
+.texto-overlay {
+    position: absolute;
+    top: 70%;
+    left: 38%;
+    transform: translate(-50%, -65%);
+    color: white;
+    font-size: 50px;
+    text-align:left;
+    font-family: Arial, sans-serif;
+    z-index: 2; 
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500; 
+    line-height: 1.2;
+
+}
+
+@media (max-width: 868px) {
+    .texto-overlay {
+        font-size: 50px;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 580px) {
+    .texto-overlay {
+        font-size: 38px;
+        line-height: 1.2;
+        margin-left: 25px;
+    }
+}
+
+
+
+
+
+
 .container {
     margin: 0 auto;
     padding: 20px;
@@ -34,12 +103,21 @@ body {
     color: #555;
 }
 
+.fa-github{
+    color: black; 
+    margin-left: -80px;
+
+}
+
 .equipe {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas lado a lado */
     gap: 20px 80px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 70px;
 }
 
 .membro {
@@ -50,7 +128,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -81,8 +159,12 @@ body {
     color: #2c3e50;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .equipe {
+        grid-template-columns: 1fr; /* Apenas uma coluna em telas menores */
+    }
+
     .membro {
         flex-direction: column;
         text-align: center;
