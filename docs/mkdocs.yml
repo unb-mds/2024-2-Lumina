@@ -1,41 +1,7 @@
- # Web application
-  web:
-    container_name: lumina-web
-    build: .
-    ports:
-      - "8000:8000"
-    volumes:
-      - .:/app
-    environment:
-      - DEBUG= True
-      
-    depends_on:
-      - migration
-      - db
-    command: python manage.py runserver 0.0.0.0:8000
-
-  # Migration
-  migration:
-    container_name: lumina-migration
-    build: .
-    volumes:
-      - .:/app
-    environment:
-      - DEBUG= True
-    depends_on:
-      - db
-    command: python manage.py migrate
-
-  # Database
-  db:
-
-  volumes:
-  lumina_db_data:
-  site_name: Lumina - Análise de Sentimentos
+site_name: Lumina - Análise de Sentimentos
 
 # Configurações de navegação
-
-  nav:
+nav:
   - Home: index.md
 
   - Configuração:
@@ -65,7 +31,7 @@
       - Reuniões: registros/meetings.md
       - Estudos: registros/estudos.md
 
-  theme:
+theme:
   # Trata-se de um tema personalizado, que foi desenvolvido a partir do tema Material
   name: material
 
@@ -93,7 +59,8 @@
     text: Roboto
     code: Roboto Mono
 
-  extra:
+# Configurações de texto no rodapé
+extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/unb-mds/2024-2-Lumina
+      link: https://github.com/unb-mds/2024-2-Squad05
