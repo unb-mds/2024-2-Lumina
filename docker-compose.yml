@@ -2,29 +2,18 @@ services:
   # Web application
   web:
     container_name: lumina-web
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.web
     ports:
       - "8000:8000"
     volumes:
       - .:/app
     environment:
       - DEBUG= True
-    depends_on:
-      - migration
-      - db
-    command: python manage.py runserver 0.0.0.0:8000
-
-  # Migration
-  migration:
-    container_name: lumina-migration
-    build: .
-    volumes:
-      - .:/app
-    environment:
-      - DEBUG= True
+      - LUMINA_OPENAI_API_KEY=your_openai_api_key
     depends_on:
       - db
-    command: python manage.py migrate
 
   # Database
   db:
@@ -41,5 +30,3 @@ services:
 
 volumes:
   lumina_db_data:
-
-

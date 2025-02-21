@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Sentimentos</title>
+    
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/selection_page_feelings.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+</head>
+
+<body>
+    {% include 'components/navbar.html' %}
+    
+    <main>
+        <div class="container_text">
+            <h1 class="title">Análise de Sentimentos</h1>
+            <h2 class="subtitle">Planos Participativos</h2>
+        </div>
+        
+        <div class="selection-buttons">
+            <div class="button" onclick="expandButton(this)">
+                <img src="../static/imgs/plano_clima.png" alt="Plano Clima">
+                <span>Plano Clima</span>
+                <p class="description">O Plano Clima busca reduzir impactos ambientais e promover sustentabilidade.</p>
+            </div>
+            <div class="button" onclick="expandButton(this)">
+                <img src="../static/imgs/PPA_participativo.png" alt="PPA Participativo">
+                <span>PPA Participativo</span>
+                <p class="description">O PPA Participativo permite maior envolvimento da população nas decisões governamentais.</p>
+            </div>
+            <div class="button" onclick="expandButton(this)">
+                <img src="../static/imgs/plano_educacional.png" alt="Plano Educacional">
+                <span>Plano Educacional</span>
+                <p class="description">Foca em ampliar o acesso à educação de qualidade, combater desigualdades no ensino e promover a inclusão digital.</p>
+            </div>
+            <div class="button" onclick="expandButton(this)">
+                <img src="../static/imgs/plano_cultura.png" alt="Plano Nacional de Cultura">
+                <span>Plano Nacional de Cultura</span>
+                <p class="description">O Plano Nacional de Cultura fomenta a diversidade cultural e incentiva a produção artística.</p>
+            </div>
+        </div>
+        
+    </main>
+    
+    <script>
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                const description = button.querySelector('.description');
+                if (description) {
+                    description.style.display = 'block';
+                    description.style.opacity = '1';
+                }
+            });
+
+            button.addEventListener('mouseleave', () => {
+                const description = button.querySelector('.description');
+                if (description) {
+                    description.style.opacity = '0';
+                    setTimeout(() => {
+                        description.style.display = 'none';
+                    }, 300); // Espera 300ms antes de esconder completamente
+                }
+            });
+        });
+
+    </script>
+    <!-- Footer -->
+    {% include 'components/footer.html' %}
+    
+</body>
+</html>

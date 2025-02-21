@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/comments.css' %}" />
+  </head>
+
+<body>
+
+    {% include 'components/navbar.html' %}
+
+    {% autoescape off %}
+        {{ plot_div }}
+    {% endautoescape %}
+
+    <h2>Comentários</h2>
+    <ul id="comments-list">
+        {% for comment in comments %}
+            <li data-sentiment="{{ comment.sentiment }}">
+                <span class="emoji"></span>
+                {{ comment.body }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% include 'components/footer.html' %}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const comments = document.querySelectorAll('#comments-list li');
+            comments.forEach(comment => {
+                const sentiment = parseInt(comment.getAttribute('data-sentiment'));
+                const emojiSpan = comment.querySelector('.emoji');
+                let emoji = '';
+
+                switch (sentiment) {
+                    case 0:
+                        emoji = '😡'; // Muito negativo
+                        break;
+                    case 1:
+                        emoji = '😞'; // Negativo
+                        break;
+                    case 2:
+                        emoji = '😐'; // Neutro
+                        break;
+                    case 3:
+                        emoji = '😊'; // Positivo
+                        break;
+                    case 4:
+                        emoji = '😍'; // Muito positivo
+                        break;
+                    default:
+                        emoji = '❓'; // Indefinido
+                }
+
+                emojiSpan.textContent = emoji;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segurança</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/proposals.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+  </head>
+
+  <body>
+    {% include 'components/navbar.html' %}
+
+    <main>
+      <h1>Propostas na Categoria: Segurança</h1>
+      {% for proposta in propostas %}
+      <div>
+        <h1>
+          {{ proposta.title }}
+        </h1>
+        <p>{{ proposta.body }}</p>
+        <p>Comentários: {{ proposta.comments_count }}</p>
+        <a class="propostas" href="{% url 'plotly_chart_view' proposal_id=proposta.id %}"> Ver Analise</a>
+      </div>
+      {% endfor %}
+    </main>
+
+    <!-- Footer -->
+    {% include 'components/footer.html' %}
+  </body>
+</html>

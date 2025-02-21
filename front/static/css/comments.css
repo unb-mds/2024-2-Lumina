@@ -1,0 +1,21 @@
+#comments-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+#comments-list li {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+}
+
+#comments-list li .emoji {
+  font-size: 24px;
+  margin-right: 10px;
+}

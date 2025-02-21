@@ -1,0 +1,365 @@
+.titles {
+    color: #0653A1;
+    font-size: 25px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 30px;
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+p.center-text {
+    text-align: center;
+    margin-top: 20px; 
+    margin-bottom: 30px; 
+}
+
+.text {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.Text h2 {
+    text-align: center; 
+}
+
+img {
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 30px;
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #F25907;
+    text-align: center;
+}
+
+.highlight {
+    color: #F25907;
+    text-align: center;
+
+}
+
+.highlight2 {
+    color: #0653A1;
+
+}
+
+.center-text {
+    text-align: center;
+}
+
+.large-text {
+    font-size: 16px;
+    line-height: 1.5; 
+}
+
+.partners {
+    text-align: center; 
+}
+
+.partner-logos {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    /* margin-top: 20px;  */
+    align-items: center; 
+}
+
+.partner-logos img {
+    width: 100px; 
+    height: auto;
+    object-fit: contain; 
+}
+
+@media (max-width: 768px) {
+    .partner-logos {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .partner-logos img {
+        width: 80px; 
+    }
+}
+
+.participate-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.Text {
+    flex: 1;
+    margin-left: 20px;
+    text-align: left; 
+}
+
+.participate-container .Img {
+    flex: 1;
+    text-align: left; 
+    display: flex;
+    justify-content: center; /
+}
+
+.participate-container .Img img {
+    width: 450px; 
+    height: 260px;
+}
+
+.container{
+    margin-bottom: 70px;
+}
+
+.capa{
+    width: 100%; 
+    height: 85vh;
+    background-color: #0653A1;
+    border-radius: 10px; 
+    object-fit: cover;
+}
+
+.container-capa{
+    border-radius: 60px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 85.5vh; 
+    border-radius: 100px; 
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 83, 161, 0.5); 
+}
+
+.texto-overlay {
+    position: absolute;
+    top: 70%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 80px;
+    text-align:left;
+    font-family: Arial, sans-serif;
+    z-index: 2; 
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500; 
+    line-height: 1.2;
+
+}
+
+@media (max-width: 868px) {
+    .texto-overlay {
+        font-size: 50px;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 580px) {
+    .texto-overlay {
+        font-size: 38px;
+        line-height: 1.2;
+        margin-left: 25px;
+    }
+}
+
+
+.pt-titulo{
+    color: #007FFF;
+}
+
+.partners-container {
+    background-color: #fe9a0d8e; 
+    color: #0653A1; 
+    padding-top: 15px; 
+    padding-bottom: 25px; 
+    margin: 50px auto;
+    border-radius: 12px; 
+    text-align: center; 
+    max-width: 1200px; 
+}
+
+.partners-container h1 {
+    font-size: 28px; 
+    margin-bottom: 30px; 
+    color: #0653A1; 
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+}
+
+.partner-logos img {
+    width: 250px; 
+    height: 140px;
+    object-fit: contain; 
+    transition: transform 0.3s ease; 
+}
+
+.partner-logos img:hover {
+    transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+    .partner-logos img {
+        width: 100px; 
+    }
+
+    .partners-container h1 {
+        font-size: 24px; 
+    }
+
+    .partner-logos {
+        gap: 20px; 
+    }
+}
+
+.number{
+    color: #FE990D;
+    font-size: 35px;
+
+}
+
+.featured-img {
+    width: 70%; 
+    max-width: 450px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.swiper {
+    width: 100%;
+    height: 85vh;
+    border-radius: 10px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: white;
+}
+
+.swiper-pagination-bullet {
+    background: white;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: #fe9a0d8e;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 20px auto;
+    /* padding: 20px; */
+}
+
+.card-image {
+    width: 550px;
+    height: 280px;
+    /* border-radius: 10px; */
+    /* margin-right: 0px; */
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content p {
+    color: #555;
+    line-height: 1.6;
+    /* text-align: left; */
+}
+
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+.card-image {
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 600px;
+        align-items: center;
+}
+
+.card-content p {
+        text-align: center;
+    }
+}
+
+.btn {
+    /* display: inline-block; */
+    background-color: #0653A1; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    /* text-align: center;  */
+    transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+.container-btn {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.btn:hover {
+    background-color: #F25907; /* Cor de fundo ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    .btn {
+    /* width: 50%; */
+    font-size: 14px; /* Reduz o tamanho da fonte */
+    padding: 8px 16px; /* Ajusta o padding */
+    }
+}

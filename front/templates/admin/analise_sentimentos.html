@@ -1,0 +1,15 @@
+{% extends "admin/base_site.html" %} {% block content %}
+<h2>Analisar Sentimentos dos Comentários</h2>
+
+<form method="post">
+  {% csrf_token %}
+  <label for="data_inicio">Data Inicial:</label>
+  <input type="date" name="data_inicio" />
+
+  <label for="max_comentarios">Quantidade de Comentários:</label>
+  <input type="number" name="max_comentarios" value="500" min="1" />
+
+  <button type="submit">Iniciar Análise</button>
+</form>
+
+{% endblock %}
