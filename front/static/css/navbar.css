@@ -133,19 +133,19 @@ header {
     }
 
     .mobile-menu {
-        display: none; /* Esconde o menu móvel por padrão */
+        display: none; 
         flex-direction: column;
-        background-color: #007FFF; /* Cor de fundo do menu móvel */
+        background-color: #007FFF; 
         position: absolute;
-        top: 80px; /* Ajuste conforme a altura do header */
+        top: 80px; 
         right: 0;
-        width: 100%; /* Largura total */
+        width: 100%; 
         padding: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar o menu */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     }
     
     .mobile-menu.open {
-        display: flex; /* Exibe o menu móvel quando a classe 'open' está presente */
+        display: flex; 
     }
 
     .mobile-menu .nav-item {
