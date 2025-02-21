@@ -40,8 +40,8 @@ Você pode optar por desenvolver localmente ou utilizar Docker para simplificar 
 ### Passo 1: Clonar o repositório
 
 ```bash
-git clone https://github.com/unb-mds/2024-2-Squad05.git
-cd 2024-2-Squad05
+git clone https://github.com/unb-mds/2024-2-Lumina.git
+cd 2024-2-Lumina
 ```
 
 ### Passo 2: Construir e iniciar os contêineres
@@ -71,8 +71,8 @@ Acesse em: [http://127.0.0.1:8000](http://127.0.0.1:8000).
 ### Passo 1: Clonar o repositório
 
 ```bash
-git clone https://github.com/unb-mds/2024-2-Squad05.git
-cd 2024-2-Squad05
+git clone https://github.com/unb-mds/2024-2-Lumina.git
+cd 2024-2-Lumina
 ```
 
 ### Passo 2: Configurar o ambiente virtual e instalar dependências
@@ -82,8 +82,11 @@ Após clonar o repositório, crie um ambiente virtual e instale as dependências
 ```bash
 python -m venv venv
 
-source venv/bin/activate        # Para Linux/Mac
-venv\Scripts\activate           # Para Windows
+./run-migrations.sh
+./docker-entrypoint.sh      # Para Linux/Mac
+
+bash run-migrations.sh
+bash docker-entrypoint.sh   # Para Windows
 ```
 
 Em seguida, instale as dependências do projeto:
@@ -118,16 +121,16 @@ O projeto utiliza o Django ORM para gerenciar o banco de dados, então é necess
 
 ```bash
 # Criar as migrações iniciais
-python manage.py makemigrations
+docker-compose exec web python manage.py makemigrations
 
 # Aplicar as migrações no banco de dados
-python manage.py migrate
+docker-compose exec web python manage.py migrate
 ```
 
 ### Passo 5: Executar o servidor local
 
 ```bash
-python manage.py runserver
+docker-compose exec web python manage.py runserver
 ```
 
 Acesse em: [http://127.0.0.1:8000](http://127.0.0.1:8000).
@@ -141,3 +144,5 @@ Tabela de Versionamento
 | 1.0    | 09/12/2024 | Criação inicial        | Luiz Henrique |
 | 1.1    | 10/12/2024 | Atualização das etapas | Luiz Henrique |
 | 1.2    | 12/12/2024 | Atualização das etapas | Luiz Henrique |
+| 1.3    | 14/02/2025 | Atualização das etapas | Arthur Fernandes |
+

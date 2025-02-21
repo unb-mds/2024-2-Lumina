@@ -3,6 +3,7 @@ name: Upload CSV to Database
 on:
   push:
     paths:
+
       - 'data/*.csv'
 
 jobs:
@@ -26,7 +27,9 @@ jobs:
           import os
           import glob
 
+
           list_of_files = glob.glob('data/*.csv')
+
           latest_file = max(list_of_files, key=os.path.getctime)
           print(f"::set-output name=latest_csv::{latest_file}")
         shell: python

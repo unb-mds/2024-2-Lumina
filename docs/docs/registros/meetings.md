@@ -20,3 +20,4 @@ Tabela de Versionamento
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|
 | 1.0    | 13/12/2024 | Criação inicial                       | LARYSSA FELIX |
+

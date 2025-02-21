@@ -14,7 +14,7 @@ O Caio criou o seguinte documento para compartilhar o conhecimento adquirido.
 
 ###### Links
 
-- [Integração Cóntinua](https://github.com/user-attachments/files/17572379/Continuous.Integration.CI.pdf)
+- [Integração Contínua](https://github.com/user-attachments/files/17572379/Continuous.Integration.CI.pdf)
 
 <br>
 
@@ -43,7 +43,7 @@ A Larissa criou o seguinte documento para compartilhar o conhecimento adquirido.
 
 ###### Descrição
 
-O objetivo deste estudo foi entender como utilizar o Markdown para criar documentações e como utilizar o GitHub Pages para hospedar essas documentações. Além disso, o Arthur também pesquisou sobre como fazer deploys automáticos utilizando o GitHub Actions.
+O objetivo deste estudo foi entender como utilizar o Markdown para criar documentações e como utilizar o GitHub Pages para hospedar essas documentações. Além disso, o Arthur também pesquisou sobre como fazer deploys automáticos utilizando o GitHub Actions e suas funcionalidades.
 
 ###### Links
 

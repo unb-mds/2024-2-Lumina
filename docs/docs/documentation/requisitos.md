@@ -46,5 +46,5 @@ Tabela de Versionamento
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|
 | 1.0    | 28/11/2024 | Criação inicial                       | Gabriel Pinto |
-| 1.1    | 01/12/2024 | Estruturação e atualização                       | Gabriel Pinto |
-| 1.2    | 11/12/2024 | Atualização                       | Gabriel Pinto |
+| 1.1    | 01/12/2024 | Estruturação e atualização            | Gabriel Pinto |
+| 1.2    | 11/12/2024 | Atualização                           | Gabriel Pinto |

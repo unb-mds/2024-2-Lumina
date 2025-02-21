@@ -64,25 +64,59 @@ Descrição do que será feito em cada Sprint:
 - Criação da release notes
 
 #### Sprint 8
+- Preparar o estudo sobre o banco de dados 
+- Preparar um estudo sobre o gráfico do Streamlit
+- Criação do escopo da home
+- Colocar em funcionamento do Streamlit 
+- Definir as configurações do ambiente
 
 #### Sprint 9
+- Implementar o Streamlit com o Front-End
+- Integração do github actions 
+- Refatoramento da arquitetura
+- Desenvolvimento da página inicial
+- Criação da página de analise de sentimentos
 
 #### Sprint 10
+- Desenvolvimento da Página Recorrentes
+- Terminar o refatoramento da arquitetura
+- Arruma o github actions
+- Desenvolvimento da Analise de Sentimentos
 
 #### Sprint 11
+- Implementação do banco de dados para armazenamento dos resultados da análise
+- Ajustes na interface do usuário para melhor experiência
+- Otimização do processamento dos dados coletados
+- Revisão da documentação técnica
 
 #### Sprint 12
+- Implementação de filtros avançados na página de análise de sentimentos
+- Melhorias na integração entre Front-End e Back-End
+- Testes e validação dos resultados da análise de sentimentos
+- Ajustes no deploy para otimizar desempenho
 
 #### Sprint 13
+- Desenvolvimento da página de métricas e estatísticas
+- Implementação de gráficos interativos para visualização dos dados
+- Correções de bugs e ajustes na interface
+- Preparação para apresentação dos resultados parciais
 
 #### Sprint 14
+- Refinamento final das funcionalidades implementadas
+- Testes finais e validação completa do sistema
+- Documentação final do projeto
+- Preparação para entrega e fechamento da sprint
 
 ---
 
 Tabela de Versionamento
 
-| Versão | Data       | Descrição                        | Autor(es)     |
-| ------ | ---------- | -------------------------------- | ------------- |
-| 1.0    | 28/11/2024 | Criação inicial                  | Gabriel Pinto |
-| 1.1    | 01/12/2024 | Atualização das Sprints 0, 1 e 2 | Gabriel Pinto |
-| 1.2    | 12/12/2024 | Atualização das Sprints 5, 6 e 7 | Luiz Henrique |
+| Versão | Data       | Descrição                         | Autor(es)     |
+| ------ | ---------- | --------------------------------  | ------------- |
+| 1.0    | 28/11/2024 | Criação inicial                   | Gabriel Pinto |
+| 1.1    | 01/12/2024 | Atualização das Sprints 0, 1 e 2  | Gabriel Pinto |
+| 1.2    | 12/12/2024 | Atualização das Sprints 5, 6 e 7  | Luiz Henrique |
+| 1.3    | 06/02/2025 | Atualização das Sprints 8, 9 e 10 | Arthur Fernandes|
+| 1.4    | 12/02/2025 | Atualização das Sprints 10, 11, 12 | Arthur Fernandes|
+| 1.5    | 13/02/2025 | Atualização das Sprints 13 e 14 | Arthur Fernandes|
+

@@ -4,7 +4,7 @@ Para o desenvolvimento do nosso projeto, utilizaremos o framework Django como ba
 
 ## Diagrama de arquitetura
 
-![Diagrama de Arquitetura](arquitetura_v3.png)
+![Diagrama de Arquitetura](arquitetura.jpeg)
 
 ## Módulos arquiteturais
 

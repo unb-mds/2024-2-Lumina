@@ -10,10 +10,10 @@
         </td>
         <td align="center">
             <a href="https://github.com/CaioPacheco">
-                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90219652?v=4" width="150px;"/>
-                <h5 class="text-center">Caio Pacheco</h5>
-            </a>
-            <p>Função: Arquiteto de Software/ Dados</p>
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90219652?v=4" width="360px;"/>
+        <h5 class="text-center">Caio Pacheco</h5>
+    </a>
+    <p>Função: Arquiteto de Software/ Dados</p>
         </td>
         <td align="center">
             <a href="https://github.com/GabrielSPinto">
@@ -24,7 +24,7 @@
         </td>
         <td align="center">
             <a href="https://github.com/felixlaryssa">
-                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/143897458?v=4" width="150px;"/>
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/143897458?v=4" width="130px;"/>
                 <h5 class="text-center">Laryssa Felix</h5>
             </a>
             <p>Função: Desenvolvedora Front-end/ Documentação</p>
