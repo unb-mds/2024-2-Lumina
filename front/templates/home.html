@@ -25,24 +25,29 @@
       </div>
     </div>
 
-      <h1 class="titles">
-        Explore o que está em alta e como isso impacta a política
-      </h1>
-      <div style="display: flex; flex-wrap: wrap">
-        <div style="flex: 1; margin-right: 20px">
-          <img class="featured-img" src="{% static 'imgs/Analise.png' %}" alt="" />
-          <h2>Análise de Sentimentos</h2>
-
-          <p class="center-text large-text">
-            Nossa tecnologia analisa os comentários das propostas do Brasil
-            Participativo, identificando se expressam apoio, crítica ou
-            neutralidade. Dessa forma, conseguimos revelar de maneira precisa o
-            impacto de cada ideia na sociedade. Com o Lumina, não se trata
-            apenas de números, mas da voz da população traduzida em dados claros
-            e acessíveis.
-          </p>
-        </div>
+    <h1 class="titles">
+      Explore o que está em alta e como isso impacta a política
+    </h1>
+    <div class="cards-container">
+      <div class="card-info">
+        <!-- <img src="{% static 'imgs/impacto_icon.png' %}" alt="Ícone Impacto na Sociedade" class="card-icon" /> -->
+        <h2>Impacto na Sociedade</h2>
+        <div class="card-text">Revelamos o impacto de cada ideia na sociedade, traduzindo a voz da população em dados claros e acessíveis.</div>
       </div>
+      
+      <div class="card-info">
+        <!-- <img src="{% static 'imgs/analise_icon.png' %}" alt="Ícone Análise de Comentários" class="card-icon" /> -->
+        <h2>Análise de Comentários</h2>
+        <div class="card-text">Nossa tecnologia analisa os comentários das propostas do Brasil Participativo, identificando se expressam apoio, crítica ou neutralidade. E apresenta os resultados em uma escala de 0 a 4, sendo 0 muito negativo, 2 neutralidade e 4 muito positivo.</div>
+      </div>
+    
+      <div class="card-info">
+        <!-- <img src="{% static 'imgs/voz_icon.png' %}" alt="Ícone Voz da População" class="card-icon" /> -->
+        <h2>Voz da População</h2>
+        <div class="card-text">Com o Lumina, não se trata apenas de números, mas da voz da população traduzida em dados claros e acessíveis.</div>
+      </div>
+    </div>
+    
       <h1>
         <span class="highlight2">
           O <span class="highlight">Brasil Participativo</span>: A fonte dos
