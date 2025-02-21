@@ -136,7 +136,7 @@ Execute os seguintes comandos para criar e aplicar as migrações iniciais do ba
 bash run-migrations.sh
 bash run-populate.sh   # Para Windows
 
-docker-compose exec web python manage.py createsuperuser   # Criar superusuário
+docker-compose exec web python manage.py createsuperuser   # Criar o superusuário
 ```
 
 ### Passo 5: Executar o servidor local
