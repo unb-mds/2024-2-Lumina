@@ -22,6 +22,15 @@
     {% endautoescape %}
 
     <h2>Comentários</h2>
+    <div id="emoji-filter">
+        <span>Filtrar :</span>
+        <span class="filter-emoji" data-sentiment="0">😡</span>
+        <span class="filter-emoji" data-sentiment="1">😞</span>
+        <span class="filter-emoji" data-sentiment="2">😐</span>
+        <span class="filter-emoji" data-sentiment="3">😊</span>
+        <span class="filter-emoji" data-sentiment="4">😍</span>
+        <span class="filter-emoji" data-sentiment="all">🔄</span>
+    </div>
     <ul id="comments-list">
         {% for comment in comments %}
             <li data-sentiment="{{ comment.sentiment }}">
@@ -30,12 +39,32 @@
             </li>
         {% endfor %}
     </ul>
+    <p id="no-comments-message" style="display: none; text-align: center;">Nenhum comentário encontrado para esta classificação.</p>
 
     {% include 'components/footer.html' %}
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const comments = document.querySelectorAll('#comments-list li');
+            const filterEmojis = document.querySelectorAll('#emoji-filter .filter-emoji');
+            const noCommentsMessage = document.getElementById('no-comments-message');
+
+            filterEmojis.forEach(emoji => {
+                emoji.addEventListener('click', function() {
+                    const sentiment = this.getAttribute('data-sentiment');
+                    let hasComments = false;
+                    comments.forEach(comment => {
+                        if (sentiment === 'all' || comment.getAttribute('data-sentiment') === sentiment) {
+                            comment.style.display = 'flex';
+                            hasComments = true;
+                        } else {
+                            comment.style.display = 'none';
+                        }
+                    });
+                    noCommentsMessage.style.display = hasComments ? 'none' : 'block';
+                });
+            });
+
             comments.forEach(comment => {
                 const sentiment = parseInt(comment.getAttribute('data-sentiment'));
                 const emojiSpan = comment.querySelector('.emoji');
