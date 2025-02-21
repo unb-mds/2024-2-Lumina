@@ -74,6 +74,14 @@ Acesse em: [http://127.0.0.1:8000](http://127.0.0.1:8000).
 git clone https://github.com/unb-mds/2024-2-Lumina.git
 cd 2024-2-Lumina
 ```
+## 2. Desenvolvimento Local
+
+### Passo 1: Clonar o repositório
+
+```bash
+git clone https://github.com/unb-mds/2024-2-Lumina.git
+cd 2024-2-Lumina
+```
 
 ### Passo 2: Configurar o ambiente virtual e instalar dependências
 
@@ -81,6 +89,8 @@ Após clonar o repositório, crie um ambiente virtual e instale as dependências
 
 ```bash
 python -m venv venv
+source venv/bin/activate   # Ativar ambiente virtual no Linux/Mac
+. venv/Scripts/activate    # Ativar ambiente virtual no Windows
 
 ./run-migrations.sh
 ./docker-entrypoint.sh      # Para Linux/Mac
@@ -91,7 +101,7 @@ bash docker-entrypoint.sh   # Para Windows
 
 Em seguida, instale as dependências do projeto:
 
-```python
+```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
@@ -117,14 +127,16 @@ DATABASES = {
 
 ### Passo 4: Executar as migrações
 
-O projeto utiliza o Django ORM para gerenciar o banco de dados, então é necessário executar as migrações para criar as tabelas necessárias. Execute os comandos abaixo:
+Execute os seguintes comandos para criar e aplicar as migrações iniciais do banco de dados:
 
 ```bash
-# Criar as migrações iniciais
-docker-compose exec web python manage.py makemigrations
+./run-migrations.sh
+./run-populate.sh   # Para popular o banco de dados
 
-# Aplicar as migrações no banco de dados
-docker-compose exec web python manage.py migrate
+bash run-migrations.sh
+bash run-populate.sh   # Para Windows
+
+docker-compose exec web python manage.py createsuperuser   # Criar superusuário
 ```
 
 ### Passo 5: Executar o servidor local
@@ -134,6 +146,17 @@ docker-compose exec web python manage.py runserver
 ```
 
 Acesse em: [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+### Passo 6: Acessar a área de administração do Django
+
+Para acessar a área de administração do Django, onde você pode gerenciar dados e realizar operações administrativas:
+
+- Abra seu navegador e vá para [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin).
+- Faça login com o superusuário criado anteriormente.
+
+### Passo 7: Finalizar o batch
+
+Após realizar as operações necessárias na área de administração do Django, finalize o batch conforme os requisitos do seu projeto.
 
 ---
 
@@ -145,4 +168,4 @@ Tabela de Versionamento
 | 1.1    | 10/12/2024 | Atualização das etapas | Luiz Henrique |
 | 1.2    | 12/12/2024 | Atualização das etapas | Luiz Henrique |
 | 1.3    | 14/02/2025 | Atualização das etapas | Arthur Fernandes |
-
+| 1.4   | 20/02/2025 | Atualização das etapas | Arthur Fernandes |
