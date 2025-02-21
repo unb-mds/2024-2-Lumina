@@ -210,10 +210,11 @@ def read_results(file_name: str) -> list[dict]:
             # Parsing the JSON string into a dict and appending to the list of results
             try:
                 json_object = json.loads(line.strip())
+                results.append(json_object)
             except json.JSONDecodeError:
                 print(f"Error decoding JSON: {line}")
                 print("Skipping this line.")
-            results.append(json_object)
+
     return results
 
 
