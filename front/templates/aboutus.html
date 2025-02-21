@@ -10,22 +10,26 @@
     <link rel="stylesheet" href="{% static 'css/aboutus.css' %}" />
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-
-   
-  </head>
     
-
+    <!-- Link do Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     {% include 'components/navbar.html' %}
 
     <div class="container">
-     
-        <div class="frase-grande">
-            <h1>A informação é a arma mais poderosa para combater a ignorância e construir uma sociedade mais justa.</h1>
+        <div class="container-capa">
+            <div class="overlay">
+              <img class="capa" src="{% static 'imgs/CapaSobreUs.png' %}" alt="" />
+                <div class="texto-overlay">
+                    "A informação é a arma mais poderosa para combater a ignorância e construir uma sociedade mais justa."
+                    <div>
+                        - Darcy Ribeiro
+                    </div>
+                </div>
+            </div>
         </div>
 
-       
         <div class="texto-explicativo">
             <p>Este site foi desenvolvido como parte do trabalho da disciplina Métodos em Desenvolvimento de Software, ministrada pela professora Carla no Campus UnB Gama, da Faculdade de Ciências e Tecnologias em Engenharia, durante o semestre 2024.2.
 
@@ -35,67 +39,88 @@
         <div class="equipe">
             
             <div class="membro">
-                <img src="{% static 'imgs/membros/Arthur.png' %}"  alt="Membro 1">
+                <a href="https://github.com/arthurfernandesj" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'imgs/membros/Arthur.png' %}" alt="Membro 1">
+                </a>
                 <div class="texto-membro">
-                    <p><strong> Arthur Fernandes </strong></p>
+                    <p><strong>Arthur Fernandes</strong></p>
                     <p>Estou atualmente no 6º semestre do curso de Engenharia de Software. Neste projeto atuei como desenvolvedor Front-end/ Designer</p>
+                    <a href="https://github.com/arthurfernandesj" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> <!-- Ícone do GitHub -->
+                    </a>
                 </div>
             </div>
 
-            <!-- Membro 2 -->
             <div class="membro">
-                <img src="{% static 'imgs/membros/caio.jpeg' %}"  alt="Membro 2">
+                <a href="https://github.com/CaioPacheco" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'imgs/membros/caio.jpeg' %}" alt="Membro 2">
+                </a>
                 <div class="texto-membro">
                     <p><strong>Caio Pacheco</strong></p>
                     <p>Estou atualmente no 8º semestre do curso de Engenharia de Software. Neste projeto atuei como arquiteto de Software/ Dados</p>
+                    <a href="https://github.com/CaioPacheco" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> <!-- Ícone do GitHub -->
+                    </a>
                 </div>
             </div>
 
-            <!-- Membro 3 -->
             <div class="membro">
-                <img src= "{% static 'imgs/membros/Gabs.png' %}"  alt="Membro 3">
+                <a href="https://github.com/GabrielSPinto" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'imgs/membros/Gabs.png' %}" alt="Membro 3">
+                </a>
                 <div class="texto-membro">
-                    <p><strong> Gabriel Pinto</strong></p>
+                    <p><strong>Gabriel Pinto</strong></p>
                     <p>Estou atualmente no 4º semestre do curso de Engenharia de Software. Neste projeto atuei como Product Owner (PO) durante a 1ª fase do projeto/ Desenvolvedor</p>
+                    <a href="https://github.com/GabrielSPinto" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> <!-- Ícone do GitHub -->
+                    </a>
                 </div>
             </div>
 
-
-            <!-- Membro 5 -->
             <div class="membro">
-                <img src= "{% static 'imgs/membros/Lary.png' %}"   alt="Membro 5">
+                <a href="https://github.com/felixlaryssa" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'imgs/membros/Lary.png' %}" alt="Membro 5">
+                </a>
                 <div class="texto-membro">
-                    <p><strong> Laryssa Felix </strong></p>
+                    <p><strong>Laryssa Felix</strong></p>
                     <p>Estou atualmente no 4º semestre do curso de Engenharia de Software. Neste projeto atuei como desenvolvedora Front-end/ Documentação</p>
+                    <a href="https://github.com/felixlaryssa" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> <!-- Ícone do GitHub -->
+                    </a>
                 </div>
             </div>
 
-
-            <!-- Membro 4 -->
             <div class="membro">
-                <img src="{% static 'imgs/membros/leticia.jpeg' %}"   alt="Membro 4">
+                <a href="https://github.com/LeticiaMonteiroo" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'imgs/membros/leticia.jpeg' %}" alt="Membro 4">
+                </a>
                 <div class="texto-membro">
                     <p><strong>Letícia Monteiro</strong></p>
                     <p>Estou atualmente no 4º semestre do curso de Engenharia de Software. Neste projeto atuei como desenvolvedora Front-end/ Designer</p>
+                    <a href="https://github.com/LeticiaMonteiroo" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> <!-- Ícone do GitHub -->
+                    </a>
                 </div>
             </div>
 
-            <!-- Membro 6 -->
             <div class="membro">
-                <img src="{% static 'imgs/membros/Luiz.png' %}"  alt="Membro 6">
+                <a href="https://github.com/luizh-gsoares" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'imgs/membros/Luiz.png' %}" alt="Membro 6">
+                </a>
                 <div class="texto-membro">
                     <p><strong>Luiz Henrique Soares</strong></p>
                     <p>Estou atualmente no 4º semestre do curso de Engenharia de Software. Neste projeto atuei como Scrum Master, durante a 1ª fase do projeto / Desenvolvedor Back-end</p>
+                    <a href="https://github.com/luizh-gsoares" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> <!-- Ícone do GitHub -->
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-<main> 
+    <main></main>
 
-</main>
-
-<!-- Footer -->
-{% include 'components/footer.html' %}
+    <!-- Footer -->
+    {% include 'components/footer.html' %}
 </body>
 </html>

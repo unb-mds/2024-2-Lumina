@@ -30,7 +30,6 @@ p.center-text {
 }
 
 img {
-    /* display: block; */
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
@@ -170,7 +169,7 @@ h2 {
     position: absolute;
     top: 70%;
     left: 38%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -65%);
     color: white;
     font-size: 80px;
     text-align:left;
@@ -336,15 +335,15 @@ h2 {
 
 .btn {
     /* display: inline-block; */
-    background-color: #0653A1; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove o sublinhado do link */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: bold; /* Texto em negrito */
+    background-color: #0653A1; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 16px; 
+    font-weight: bold; 
     /* text-align: center;  */
-    transition: background-color 0.3s ease; /* Transição suave de cor */
+    transition: background-color 0.3s ease;
 }
 .container-btn {
     display: flex;
@@ -353,13 +352,13 @@ h2 {
 }
 
 .btn:hover {
-    background-color: #F25907; /* Cor de fundo ao passar o mouse */
+    background-color: #F25907;
 }
 
 @media (max-width: 768px) {
     .btn {
     /* width: 50%; */
-    font-size: 14px; /* Reduz o tamanho da fonte */
-    padding: 8px 16px; /* Ajusta o padding */
+    font-size: 14px; 
+    padding: 8px 16px;
     }
 }
